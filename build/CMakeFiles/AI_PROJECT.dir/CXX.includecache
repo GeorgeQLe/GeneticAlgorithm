@@ -1,0 +1,152 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/GA/GeneticAlgorithmBool.hpp
+map
+-
+memory
+-
+vector
+-
+Search_Algorithms/Result.hpp
+../include/GA/Search_Algorithms/Result.hpp
+Search_Algorithms/ProblemScore.hpp
+../include/GA/Search_Algorithms/ProblemScore.hpp
+Search_Algorithms/Searcher.hpp
+../include/GA/Search_Algorithms/Searcher.hpp
+expected_data.hpp
+../include/GA/expected_data.hpp
+
+../include/GA/expected_data.hpp
+iostream
+-
+map
+-
+memory
+-
+string
+-
+utility
+-
+vector
+-
+Search_Algorithms/Node.hpp
+../include/GA/Search_Algorithms/Node.hpp
+
+../include/Search_Algorithms/Edge.hpp
+Node.hpp
+../include/Search_Algorithms/Node.hpp
+
+../include/Search_Algorithms/Graph.hpp
+deque
+-
+map
+-
+utility
+-
+Node.hpp
+../include/Search_Algorithms/Node.hpp
+Edge.hpp
+../include/Search_Algorithms/Edge.hpp
+
+../include/Search_Algorithms/Node.hpp
+
+../include/Search_Algorithms/ProblemScore.hpp
+iostream
+-
+map
+-
+vector
+-
+Result.hpp
+../include/Search_Algorithms/Result.hpp
+
+../include/Search_Algorithms/Result.hpp
+deque
+-
+vector
+-
+Node.hpp
+../include/Search_Algorithms/Node.hpp
+
+../include/Search_Algorithms/Searcher.hpp
+map
+-
+deque
+-
+vector
+-
+math.h
+-
+string
+-
+ProblemScore.hpp
+../include/Search_Algorithms/ProblemScore.hpp
+Result.hpp
+../include/Search_Algorithms/Result.hpp
+Graph.hpp
+../include/Search_Algorithms/Graph.hpp
+
+/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/build/driver.cpp
+iostream
+-
+GA/GeneticAlgorithmBool.hpp
+/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/build/GA/GeneticAlgorithmBool.hpp
+
+/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/src/GA/GeneticAlgorithmBool.cpp
+algorithm
+-
+random
+-
+iostream
+-
+Search_Algorithms/Node.hpp
+/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/src/GA/Search_Algorithms/Node.hpp
+GA/GeneticAlgorithmBool.hpp
+/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/src/GA/GA/GeneticAlgorithmBool.hpp
+
+/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/src/Search_Algorithms/Edge.cpp
+Search_Algorithms/Edge.hpp
+/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/src/Search_Algorithms/Search_Algorithms/Edge.hpp
+
+/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/src/Search_Algorithms/Graph.cpp
+iostream
+-
+Search_Algorithms/Graph.hpp
+/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/src/Search_Algorithms/Search_Algorithms/Graph.hpp
+
+/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/src/Search_Algorithms/Node.cpp
+Search_Algorithms/Node.hpp
+/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/src/Search_Algorithms/Search_Algorithms/Node.hpp
+
+/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/src/Search_Algorithms/ProblemScore.cpp
+climits
+-
+iostream
+-
+Search_Algorithms/ProblemScore.hpp
+/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/src/Search_Algorithms/Search_Algorithms/ProblemScore.hpp
+
+/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/src/Search_Algorithms/Result.cpp
+Search_Algorithms/Result.hpp
+/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/src/Search_Algorithms/Search_Algorithms/Result.hpp
+
+/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/src/Search_Algorithms/Searcher.cpp
+cstdlib
+-
+climits
+-
+algorithm
+-
+fstream
+-
+iostream
+-
+Search_Algorithms/Searcher.hpp
+/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/src/Search_Algorithms/Search_Algorithms/Searcher.hpp
+

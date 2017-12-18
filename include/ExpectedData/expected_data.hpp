@@ -12,13 +12,16 @@ class ExpectedData
     typedef std::vector<ProblemType> ProblemArray;
 
     public:
-    ExpectedData() { }
+    ExpectedData() : m_number_of_problems(0) { }
+    ExpectedData(ProblemArray problems) 
+        : m_problems(problems), m_number_of_problems(problems.size()) { }
 
     /*---------------------------------------------------------------
         Adds a problem of a generic problem type to the ExpectedData
         class's array of problems
     ---------------------------------------------------------------*/
-    void add_problem(ProblemType problem_name) { 
+    void add_problem(ProblemType problem_name) 
+    { 
         m_problems.push_back(problem_name); 
         ++m_number_of_problems;
     }
@@ -27,7 +30,8 @@ class ExpectedData
         Clears the current problems stored in the ExpectedData
         class and adds new ones.
     -------------------------------------------------------------*/
-    void add_all_problems(std::vector<ProblemType> problem_names) {
+    void add_all_problems(std::vector<ProblemType> problem_names) 
+    {
         m_problems.clear();
         m_problems = problem_names;
         m_number_of_problems = problem_names.size();
@@ -51,15 +55,15 @@ class ExpectedData
     /*----------------------------------------------------------------------- 
         comparison operator between this expected data class and another one
     -----------------------------------------------------------------------*/
-    friend bool operator==(const ExpectedData& first)
+    friend bool operator==(const ExpectedData& first, const ExpectedData& second)
     {
         bool result = false;
-        if(first.m_number_of_problems == this->m_number_of_problems)
+        if(first.m_number_of_problems == second->m_number_of_problems)
         {
             bool mismatch_found = false;
             for(unsigned int i = 0; i < first.m_number_of_problems.size(); ++i)
             {
-                if(first.m_problems.at(i) != this->m_problems.at(i))
+                if(first.m_problems.at(i) != second->m_problems.at(i))
                 {
                     mismatch_found = true;
                 }

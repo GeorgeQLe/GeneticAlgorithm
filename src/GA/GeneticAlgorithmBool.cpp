@@ -3,7 +3,6 @@
 
 #include <iostream>
 
-#include "Search_Algorithms/Node.hpp"
 #include "GA/GeneticAlgorithmBool.hpp"
 
 bool return_random_bool()
@@ -96,17 +95,14 @@ void swap_range(std::vector<bool>& child1, std::vector<bool>& child2, unsigned i
 ExpectedData GeneticAlgorithmBool::generate_expected_data()
 {
     std::vector<std::vector<bool>> fittest_individuals;
-    std::vector<ProblemScore> scores;
-    std::vector<std::vector<std::deque<Node*>>> problem_solutions;
+    
     std::vector<std::vector<std::string>> problem_labels;
 
     Algorithm_names* instance = Algorithm_names::get_instance_ptr();
 
     for(unsigned int i = 0; i < m_problems.size(); ++i)
     {
-        Searcher searches(m_problems.at(i));
-        ProblemScore problem_scores(searches.SearchAll());
-        scores.push_back(problem_scores);
+        
     }
 
     // one genetic algorithm
@@ -117,7 +113,7 @@ ExpectedData GeneticAlgorithmBool::generate_expected_data()
         for(unsigned int k = 1; k < m_number_of_generations; ++k)
         {   
             std::cout << "Starting generation " << k << "\n";
-            fitness_function(scores.at(j));
+            fitness_function();
             std::cout << "Crossover and mutation\n";
             crossover();
         }
@@ -136,17 +132,7 @@ ExpectedData GeneticAlgorithmBool::generate_expected_data()
     // finding best path
     for(unsigned int i = 0; i < m_problems.size(); ++i)
     {
-        std::vector<std::deque<Node*>> temp_solutions;
-        for(unsigned int j = 0; j < fittest_individuals.at(i).size(); ++j)
-        {               
-            std::deque<Node*> temp_path;
-            if(fittest_individuals.at(i).at(j))
-            {
-                temp_path = scores.at(i).getResults().at(j).getPath();
-                temp_solutions.push_back(temp_path);
-            }
-        }
-        problem_solutions.push_back(temp_solutions);
+
     }
     ExpectedData data;
     data.add_data(m_problems, problem_solutions, problem_labels);

@@ -42,7 +42,8 @@
         "xmemory0": "cpp",
         "xtree": "cpp",
         "xutility": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "iomanip": "cpp"
     },
     "git.ignoreLimitWarning": true,
     "C_Cpp.intelliSenseEngineFallback": "Disabled"

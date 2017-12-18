@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT"
+CMAKE_SOURCE_DIR = "/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/build"
+CMAKE_BINARY_DIR = "/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/build/CMakeFiles" "/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/build/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/build/CMakeFiles" "/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/build/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/build/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/build/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -150,6 +150,60 @@ driver.cpp.s:
 	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/driver.cpp.s
 .PHONY : driver.cpp.s
 
+src/ANN/FeedForwardANN.o: src/ANN/FeedForwardANN.cpp.o
+
+.PHONY : src/ANN/FeedForwardANN.o
+
+# target to build an object file
+src/ANN/FeedForwardANN.cpp.o:
+	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.o
+.PHONY : src/ANN/FeedForwardANN.cpp.o
+
+src/ANN/FeedForwardANN.i: src/ANN/FeedForwardANN.cpp.i
+
+.PHONY : src/ANN/FeedForwardANN.i
+
+# target to preprocess a source file
+src/ANN/FeedForwardANN.cpp.i:
+	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.i
+.PHONY : src/ANN/FeedForwardANN.cpp.i
+
+src/ANN/FeedForwardANN.s: src/ANN/FeedForwardANN.cpp.s
+
+.PHONY : src/ANN/FeedForwardANN.s
+
+# target to generate assembly for a file
+src/ANN/FeedForwardANN.cpp.s:
+	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.s
+.PHONY : src/ANN/FeedForwardANN.cpp.s
+
+src/ANN/Neurons/ANN_layers.o: src/ANN/Neurons/ANN_layers.cpp.o
+
+.PHONY : src/ANN/Neurons/ANN_layers.o
+
+# target to build an object file
+src/ANN/Neurons/ANN_layers.cpp.o:
+	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.o
+.PHONY : src/ANN/Neurons/ANN_layers.cpp.o
+
+src/ANN/Neurons/ANN_layers.i: src/ANN/Neurons/ANN_layers.cpp.i
+
+.PHONY : src/ANN/Neurons/ANN_layers.i
+
+# target to preprocess a source file
+src/ANN/Neurons/ANN_layers.cpp.i:
+	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.i
+.PHONY : src/ANN/Neurons/ANN_layers.cpp.i
+
+src/ANN/Neurons/ANN_layers.s: src/ANN/Neurons/ANN_layers.cpp.s
+
+.PHONY : src/ANN/Neurons/ANN_layers.s
+
+# target to generate assembly for a file
+src/ANN/Neurons/ANN_layers.cpp.s:
+	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.s
+.PHONY : src/ANN/Neurons/ANN_layers.cpp.s
+
 src/GA/GeneticAlgorithmBool.o: src/GA/GeneticAlgorithmBool.cpp.o
 
 .PHONY : src/GA/GeneticAlgorithmBool.o
@@ -177,168 +231,6 @@ src/GA/GeneticAlgorithmBool.cpp.s:
 	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.s
 .PHONY : src/GA/GeneticAlgorithmBool.cpp.s
 
-src/Search_Algorithms/Edge.o: src/Search_Algorithms/Edge.cpp.o
-
-.PHONY : src/Search_Algorithms/Edge.o
-
-# target to build an object file
-src/Search_Algorithms/Edge.cpp.o:
-	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Edge.cpp.o
-.PHONY : src/Search_Algorithms/Edge.cpp.o
-
-src/Search_Algorithms/Edge.i: src/Search_Algorithms/Edge.cpp.i
-
-.PHONY : src/Search_Algorithms/Edge.i
-
-# target to preprocess a source file
-src/Search_Algorithms/Edge.cpp.i:
-	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Edge.cpp.i
-.PHONY : src/Search_Algorithms/Edge.cpp.i
-
-src/Search_Algorithms/Edge.s: src/Search_Algorithms/Edge.cpp.s
-
-.PHONY : src/Search_Algorithms/Edge.s
-
-# target to generate assembly for a file
-src/Search_Algorithms/Edge.cpp.s:
-	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Edge.cpp.s
-.PHONY : src/Search_Algorithms/Edge.cpp.s
-
-src/Search_Algorithms/Graph.o: src/Search_Algorithms/Graph.cpp.o
-
-.PHONY : src/Search_Algorithms/Graph.o
-
-# target to build an object file
-src/Search_Algorithms/Graph.cpp.o:
-	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Graph.cpp.o
-.PHONY : src/Search_Algorithms/Graph.cpp.o
-
-src/Search_Algorithms/Graph.i: src/Search_Algorithms/Graph.cpp.i
-
-.PHONY : src/Search_Algorithms/Graph.i
-
-# target to preprocess a source file
-src/Search_Algorithms/Graph.cpp.i:
-	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Graph.cpp.i
-.PHONY : src/Search_Algorithms/Graph.cpp.i
-
-src/Search_Algorithms/Graph.s: src/Search_Algorithms/Graph.cpp.s
-
-.PHONY : src/Search_Algorithms/Graph.s
-
-# target to generate assembly for a file
-src/Search_Algorithms/Graph.cpp.s:
-	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Graph.cpp.s
-.PHONY : src/Search_Algorithms/Graph.cpp.s
-
-src/Search_Algorithms/Node.o: src/Search_Algorithms/Node.cpp.o
-
-.PHONY : src/Search_Algorithms/Node.o
-
-# target to build an object file
-src/Search_Algorithms/Node.cpp.o:
-	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Node.cpp.o
-.PHONY : src/Search_Algorithms/Node.cpp.o
-
-src/Search_Algorithms/Node.i: src/Search_Algorithms/Node.cpp.i
-
-.PHONY : src/Search_Algorithms/Node.i
-
-# target to preprocess a source file
-src/Search_Algorithms/Node.cpp.i:
-	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Node.cpp.i
-.PHONY : src/Search_Algorithms/Node.cpp.i
-
-src/Search_Algorithms/Node.s: src/Search_Algorithms/Node.cpp.s
-
-.PHONY : src/Search_Algorithms/Node.s
-
-# target to generate assembly for a file
-src/Search_Algorithms/Node.cpp.s:
-	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Node.cpp.s
-.PHONY : src/Search_Algorithms/Node.cpp.s
-
-src/Search_Algorithms/ProblemScore.o: src/Search_Algorithms/ProblemScore.cpp.o
-
-.PHONY : src/Search_Algorithms/ProblemScore.o
-
-# target to build an object file
-src/Search_Algorithms/ProblemScore.cpp.o:
-	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/ProblemScore.cpp.o
-.PHONY : src/Search_Algorithms/ProblemScore.cpp.o
-
-src/Search_Algorithms/ProblemScore.i: src/Search_Algorithms/ProblemScore.cpp.i
-
-.PHONY : src/Search_Algorithms/ProblemScore.i
-
-# target to preprocess a source file
-src/Search_Algorithms/ProblemScore.cpp.i:
-	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/ProblemScore.cpp.i
-.PHONY : src/Search_Algorithms/ProblemScore.cpp.i
-
-src/Search_Algorithms/ProblemScore.s: src/Search_Algorithms/ProblemScore.cpp.s
-
-.PHONY : src/Search_Algorithms/ProblemScore.s
-
-# target to generate assembly for a file
-src/Search_Algorithms/ProblemScore.cpp.s:
-	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/ProblemScore.cpp.s
-.PHONY : src/Search_Algorithms/ProblemScore.cpp.s
-
-src/Search_Algorithms/Result.o: src/Search_Algorithms/Result.cpp.o
-
-.PHONY : src/Search_Algorithms/Result.o
-
-# target to build an object file
-src/Search_Algorithms/Result.cpp.o:
-	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Result.cpp.o
-.PHONY : src/Search_Algorithms/Result.cpp.o
-
-src/Search_Algorithms/Result.i: src/Search_Algorithms/Result.cpp.i
-
-.PHONY : src/Search_Algorithms/Result.i
-
-# target to preprocess a source file
-src/Search_Algorithms/Result.cpp.i:
-	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Result.cpp.i
-.PHONY : src/Search_Algorithms/Result.cpp.i
-
-src/Search_Algorithms/Result.s: src/Search_Algorithms/Result.cpp.s
-
-.PHONY : src/Search_Algorithms/Result.s
-
-# target to generate assembly for a file
-src/Search_Algorithms/Result.cpp.s:
-	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Result.cpp.s
-.PHONY : src/Search_Algorithms/Result.cpp.s
-
-src/Search_Algorithms/Searcher.o: src/Search_Algorithms/Searcher.cpp.o
-
-.PHONY : src/Search_Algorithms/Searcher.o
-
-# target to build an object file
-src/Search_Algorithms/Searcher.cpp.o:
-	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Searcher.cpp.o
-.PHONY : src/Search_Algorithms/Searcher.cpp.o
-
-src/Search_Algorithms/Searcher.i: src/Search_Algorithms/Searcher.cpp.i
-
-.PHONY : src/Search_Algorithms/Searcher.i
-
-# target to preprocess a source file
-src/Search_Algorithms/Searcher.cpp.i:
-	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Searcher.cpp.i
-.PHONY : src/Search_Algorithms/Searcher.cpp.i
-
-src/Search_Algorithms/Searcher.s: src/Search_Algorithms/Searcher.cpp.s
-
-.PHONY : src/Search_Algorithms/Searcher.s
-
-# target to generate assembly for a file
-src/Search_Algorithms/Searcher.cpp.s:
-	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Searcher.cpp.s
-.PHONY : src/Search_Algorithms/Searcher.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -351,27 +243,15 @@ help:
 	@echo "... driver.o"
 	@echo "... driver.i"
 	@echo "... driver.s"
+	@echo "... src/ANN/FeedForwardANN.o"
+	@echo "... src/ANN/FeedForwardANN.i"
+	@echo "... src/ANN/FeedForwardANN.s"
+	@echo "... src/ANN/Neurons/ANN_layers.o"
+	@echo "... src/ANN/Neurons/ANN_layers.i"
+	@echo "... src/ANN/Neurons/ANN_layers.s"
 	@echo "... src/GA/GeneticAlgorithmBool.o"
 	@echo "... src/GA/GeneticAlgorithmBool.i"
 	@echo "... src/GA/GeneticAlgorithmBool.s"
-	@echo "... src/Search_Algorithms/Edge.o"
-	@echo "... src/Search_Algorithms/Edge.i"
-	@echo "... src/Search_Algorithms/Edge.s"
-	@echo "... src/Search_Algorithms/Graph.o"
-	@echo "... src/Search_Algorithms/Graph.i"
-	@echo "... src/Search_Algorithms/Graph.s"
-	@echo "... src/Search_Algorithms/Node.o"
-	@echo "... src/Search_Algorithms/Node.i"
-	@echo "... src/Search_Algorithms/Node.s"
-	@echo "... src/Search_Algorithms/ProblemScore.o"
-	@echo "... src/Search_Algorithms/ProblemScore.i"
-	@echo "... src/Search_Algorithms/ProblemScore.s"
-	@echo "... src/Search_Algorithms/Result.o"
-	@echo "... src/Search_Algorithms/Result.i"
-	@echo "... src/Search_Algorithms/Result.s"
-	@echo "... src/Search_Algorithms/Searcher.o"
-	@echo "... src/Search_Algorithms/Searcher.i"
-	@echo "... src/Search_Algorithms/Searcher.s"
 .PHONY : help
 
 

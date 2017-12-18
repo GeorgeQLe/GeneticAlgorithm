@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT
+# Install script for directory: /mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

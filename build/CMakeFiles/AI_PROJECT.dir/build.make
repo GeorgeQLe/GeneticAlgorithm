@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT"
+CMAKE_SOURCE_DIR = "/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/build"
+CMAKE_BINARY_DIR = "/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/build"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/AI_PROJECT.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/AI_PROJECT.dir/flags.make
 
 CMakeFiles/AI_PROJECT.dir/driver.cpp.o: CMakeFiles/AI_PROJECT.dir/flags.make
 CMakeFiles/AI_PROJECT.dir/driver.cpp.o: driver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/AI_PROJECT.dir/driver.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AI_PROJECT.dir/driver.cpp.o -c "/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/build/driver.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/AI_PROJECT.dir/driver.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AI_PROJECT.dir/driver.cpp.o -c "/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/build/driver.cpp"
 
 CMakeFiles/AI_PROJECT.dir/driver.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AI_PROJECT.dir/driver.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/build/driver.cpp" > CMakeFiles/AI_PROJECT.dir/driver.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/build/driver.cpp" > CMakeFiles/AI_PROJECT.dir/driver.cpp.i
 
 CMakeFiles/AI_PROJECT.dir/driver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AI_PROJECT.dir/driver.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/build/driver.cpp" -o CMakeFiles/AI_PROJECT.dir/driver.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/build/driver.cpp" -o CMakeFiles/AI_PROJECT.dir/driver.cpp.s
 
 CMakeFiles/AI_PROJECT.dir/driver.cpp.o.requires:
 
@@ -81,18 +81,66 @@ CMakeFiles/AI_PROJECT.dir/driver.cpp.o.provides: CMakeFiles/AI_PROJECT.dir/drive
 CMakeFiles/AI_PROJECT.dir/driver.cpp.o.provides.build: CMakeFiles/AI_PROJECT.dir/driver.cpp.o
 
 
+CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.o: CMakeFiles/AI_PROJECT.dir/flags.make
+CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.o: ../src/ANN/FeedForwardANN.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.o -c "/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/src/ANN/FeedForwardANN.cpp"
+
+CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/src/ANN/FeedForwardANN.cpp" > CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.i
+
+CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/src/ANN/FeedForwardANN.cpp" -o CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.s
+
+CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.o.requires:
+
+.PHONY : CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.o.requires
+
+CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.o.provides: CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.o.requires
+	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.o.provides.build
+.PHONY : CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.o.provides
+
+CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.o.provides.build: CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.o
+
+
+CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.o: CMakeFiles/AI_PROJECT.dir/flags.make
+CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.o: ../src/ANN/Neurons/ANN_layers.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.o -c "/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/src/ANN/Neurons/ANN_layers.cpp"
+
+CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/src/ANN/Neurons/ANN_layers.cpp" > CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.i
+
+CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/src/ANN/Neurons/ANN_layers.cpp" -o CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.s
+
+CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.o.requires:
+
+.PHONY : CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.o.requires
+
+CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.o.provides: CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.o.requires
+	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.o.provides.build
+.PHONY : CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.o.provides
+
+CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.o.provides.build: CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.o
+
+
 CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.o: CMakeFiles/AI_PROJECT.dir/flags.make
 CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.o: ../src/GA/GeneticAlgorithmBool.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.o -c "/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/src/GA/GeneticAlgorithmBool.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.o -c "/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/src/GA/GeneticAlgorithmBool.cpp"
 
 CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/src/GA/GeneticAlgorithmBool.cpp" > CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/src/GA/GeneticAlgorithmBool.cpp" > CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.i
 
 CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/src/GA/GeneticAlgorithmBool.cpp" -o CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/src/GA/GeneticAlgorithmBool.cpp" -o CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.s
 
 CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.o.requires:
 
@@ -105,175 +153,23 @@ CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.o.provides: CMakeFiles
 CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.o.provides.build: CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.o
 
 
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Edge.cpp.o: CMakeFiles/AI_PROJECT.dir/flags.make
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Edge.cpp.o: ../src/Search_Algorithms/Edge.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Edge.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Edge.cpp.o -c "/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/src/Search_Algorithms/Edge.cpp"
-
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Edge.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Edge.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/src/Search_Algorithms/Edge.cpp" > CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Edge.cpp.i
-
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Edge.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Edge.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/src/Search_Algorithms/Edge.cpp" -o CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Edge.cpp.s
-
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Edge.cpp.o.requires:
-
-.PHONY : CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Edge.cpp.o.requires
-
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Edge.cpp.o.provides: CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Edge.cpp.o.requires
-	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Edge.cpp.o.provides.build
-.PHONY : CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Edge.cpp.o.provides
-
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Edge.cpp.o.provides.build: CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Edge.cpp.o
-
-
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Graph.cpp.o: CMakeFiles/AI_PROJECT.dir/flags.make
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Graph.cpp.o: ../src/Search_Algorithms/Graph.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Graph.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Graph.cpp.o -c "/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/src/Search_Algorithms/Graph.cpp"
-
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Graph.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Graph.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/src/Search_Algorithms/Graph.cpp" > CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Graph.cpp.i
-
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Graph.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Graph.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/src/Search_Algorithms/Graph.cpp" -o CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Graph.cpp.s
-
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Graph.cpp.o.requires:
-
-.PHONY : CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Graph.cpp.o.requires
-
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Graph.cpp.o.provides: CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Graph.cpp.o.requires
-	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Graph.cpp.o.provides.build
-.PHONY : CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Graph.cpp.o.provides
-
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Graph.cpp.o.provides.build: CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Graph.cpp.o
-
-
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Node.cpp.o: CMakeFiles/AI_PROJECT.dir/flags.make
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Node.cpp.o: ../src/Search_Algorithms/Node.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Node.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Node.cpp.o -c "/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/src/Search_Algorithms/Node.cpp"
-
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Node.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Node.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/src/Search_Algorithms/Node.cpp" > CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Node.cpp.i
-
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Node.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Node.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/src/Search_Algorithms/Node.cpp" -o CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Node.cpp.s
-
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Node.cpp.o.requires:
-
-.PHONY : CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Node.cpp.o.requires
-
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Node.cpp.o.provides: CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Node.cpp.o.requires
-	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Node.cpp.o.provides.build
-.PHONY : CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Node.cpp.o.provides
-
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Node.cpp.o.provides.build: CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Node.cpp.o
-
-
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/ProblemScore.cpp.o: CMakeFiles/AI_PROJECT.dir/flags.make
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/ProblemScore.cpp.o: ../src/Search_Algorithms/ProblemScore.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/ProblemScore.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/ProblemScore.cpp.o -c "/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/src/Search_Algorithms/ProblemScore.cpp"
-
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/ProblemScore.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/ProblemScore.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/src/Search_Algorithms/ProblemScore.cpp" > CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/ProblemScore.cpp.i
-
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/ProblemScore.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/ProblemScore.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/src/Search_Algorithms/ProblemScore.cpp" -o CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/ProblemScore.cpp.s
-
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/ProblemScore.cpp.o.requires:
-
-.PHONY : CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/ProblemScore.cpp.o.requires
-
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/ProblemScore.cpp.o.provides: CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/ProblemScore.cpp.o.requires
-	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/ProblemScore.cpp.o.provides.build
-.PHONY : CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/ProblemScore.cpp.o.provides
-
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/ProblemScore.cpp.o.provides.build: CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/ProblemScore.cpp.o
-
-
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Result.cpp.o: CMakeFiles/AI_PROJECT.dir/flags.make
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Result.cpp.o: ../src/Search_Algorithms/Result.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Result.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Result.cpp.o -c "/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/src/Search_Algorithms/Result.cpp"
-
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Result.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Result.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/src/Search_Algorithms/Result.cpp" > CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Result.cpp.i
-
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Result.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Result.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/src/Search_Algorithms/Result.cpp" -o CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Result.cpp.s
-
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Result.cpp.o.requires:
-
-.PHONY : CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Result.cpp.o.requires
-
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Result.cpp.o.provides: CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Result.cpp.o.requires
-	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Result.cpp.o.provides.build
-.PHONY : CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Result.cpp.o.provides
-
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Result.cpp.o.provides.build: CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Result.cpp.o
-
-
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Searcher.cpp.o: CMakeFiles/AI_PROJECT.dir/flags.make
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Searcher.cpp.o: ../src/Search_Algorithms/Searcher.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Searcher.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Searcher.cpp.o -c "/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/src/Search_Algorithms/Searcher.cpp"
-
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Searcher.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Searcher.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/src/Search_Algorithms/Searcher.cpp" > CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Searcher.cpp.i
-
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Searcher.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Searcher.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/src/Search_Algorithms/Searcher.cpp" -o CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Searcher.cpp.s
-
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Searcher.cpp.o.requires:
-
-.PHONY : CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Searcher.cpp.o.requires
-
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Searcher.cpp.o.provides: CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Searcher.cpp.o.requires
-	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Searcher.cpp.o.provides.build
-.PHONY : CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Searcher.cpp.o.provides
-
-CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Searcher.cpp.o.provides.build: CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Searcher.cpp.o
-
-
 # Object files for target AI_PROJECT
 AI_PROJECT_OBJECTS = \
 "CMakeFiles/AI_PROJECT.dir/driver.cpp.o" \
-"CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.o" \
-"CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Edge.cpp.o" \
-"CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Graph.cpp.o" \
-"CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Node.cpp.o" \
-"CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/ProblemScore.cpp.o" \
-"CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Result.cpp.o" \
-"CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Searcher.cpp.o"
+"CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.o" \
+"CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.o" \
+"CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.o"
 
 # External object files for target AI_PROJECT
 AI_PROJECT_EXTERNAL_OBJECTS =
 
 AI_PROJECT: CMakeFiles/AI_PROJECT.dir/driver.cpp.o
+AI_PROJECT: CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.o
+AI_PROJECT: CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.o
 AI_PROJECT: CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.o
-AI_PROJECT: CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Edge.cpp.o
-AI_PROJECT: CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Graph.cpp.o
-AI_PROJECT: CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Node.cpp.o
-AI_PROJECT: CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/ProblemScore.cpp.o
-AI_PROJECT: CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Result.cpp.o
-AI_PROJECT: CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Searcher.cpp.o
 AI_PROJECT: CMakeFiles/AI_PROJECT.dir/build.make
 AI_PROJECT: CMakeFiles/AI_PROJECT.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable AI_PROJECT"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable AI_PROJECT"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/AI_PROJECT.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -282,13 +178,9 @@ CMakeFiles/AI_PROJECT.dir/build: AI_PROJECT
 .PHONY : CMakeFiles/AI_PROJECT.dir/build
 
 CMakeFiles/AI_PROJECT.dir/requires: CMakeFiles/AI_PROJECT.dir/driver.cpp.o.requires
+CMakeFiles/AI_PROJECT.dir/requires: CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.o.requires
+CMakeFiles/AI_PROJECT.dir/requires: CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.o.requires
 CMakeFiles/AI_PROJECT.dir/requires: CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.o.requires
-CMakeFiles/AI_PROJECT.dir/requires: CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Edge.cpp.o.requires
-CMakeFiles/AI_PROJECT.dir/requires: CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Graph.cpp.o.requires
-CMakeFiles/AI_PROJECT.dir/requires: CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Node.cpp.o.requires
-CMakeFiles/AI_PROJECT.dir/requires: CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/ProblemScore.cpp.o.requires
-CMakeFiles/AI_PROJECT.dir/requires: CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Result.cpp.o.requires
-CMakeFiles/AI_PROJECT.dir/requires: CMakeFiles/AI_PROJECT.dir/src/Search_Algorithms/Searcher.cpp.o.requires
 
 .PHONY : CMakeFiles/AI_PROJECT.dir/requires
 
@@ -297,6 +189,6 @@ CMakeFiles/AI_PROJECT.dir/clean:
 .PHONY : CMakeFiles/AI_PROJECT.dir/clean
 
 CMakeFiles/AI_PROJECT.dir/depend:
-	cd "/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT" "/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT" "/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/build" "/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/build" "/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/build/CMakeFiles/AI_PROJECT.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects" "/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects" "/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/build" "/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/build" "/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/build/CMakeFiles/AI_PROJECT.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/AI_PROJECT.dir/depend
 

@@ -6,5 +6,5 @@ CXX_FLAGS =  -Wall -std=c++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I"/mnt/c/Users/George Le/Documents/GitHub/Teaching/AI_project/FINAL_PROJECT/include" 
+CXX_INCLUDES = -I"/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/include" 
 

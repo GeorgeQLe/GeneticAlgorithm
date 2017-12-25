@@ -11,7 +11,7 @@ bool return_random_bool()
 	
 	std::mt19937 gen(std::random_device{}());
 	std::uniform_int_distribution<> dist(0, 1);
-	random_number = dist(gen); 
+	random_number = dist(gen);
 
     if(random_number)
     {
@@ -95,53 +95,39 @@ void swap_range(std::vector<bool>& child1, std::vector<bool>& child2, unsigned i
 ExpectedData GeneticAlgorithmBool::generate_expected_data()
 {
     std::vector<std::vector<bool>> fittest_individuals;
-    
+    std::vector<std::vector<std::string>> problem_solutions;
     std::vector<std::vector<std::string>> problem_labels;
-
-    Algorithm_names* instance = Algorithm_names::get_instance_ptr();
-
-    for(unsigned int i = 0; i < m_problems.size(); ++i)
+    
+    for (unsigned int index_problem = 0; index_problem < m_scores.get_problem_names().size(); ++index_problem)
     {
-        
-    }
-
-    // one genetic algorithm
-    for(unsigned int j = 0; j < m_problems.size(); ++j)
-    {
-        std::cout << "Generating the initial random population\n\n";
+        // Runs one genetic algorithm for each of the problems
         generate_random_population();
-        for(unsigned int k = 1; k < m_number_of_generations; ++k)
-        {   
-            std::cout << "Starting generation " << k << "\n";
-            fitness_function();
-            std::cout << "Crossover and mutation\n";
+        for (unsigned int index_generation = 1; index_generation < m_number_of_generations; ++index_generation)
+        {
+            fitness_function(index_problem);
             crossover();
         }
-        fittest_individuals.push_back(last_fitness_function(scores.at(j), m_generations.at(m_current_generation - 1)));
+        fittest_individuals.push_back(last_fitness_function(m_generations.at(m_current_generation - 1), index_problem));
         std::vector<std::string> labels_for_specific_problem;
-        for(unsigned int l = 0; l < fittest_individuals.at(j).size(); ++l)
+        std::vector<std::string> solution_for_specific_problem;
+        for (unsigned int index_trait = 0; index_trait < fittest_individuals.at(index_problem).size(); ++index_trait)
         {
-            if(fittest_individuals.at(j).at(l))
+            if (fittest_individuals.at(index_problem).at(index_trait))
             {
-                labels_for_specific_problem.push_back(instance->get_name(l));
+                labels_for_specific_problem.push_back(m_scores.get_score_labels().at(index_problem).at(index_trait));
+                solution_for_specific_problem.push_back(m_scores.get_solutions().at(index_problem).at(index_trait));
             }
         }
         problem_labels.push_back(labels_for_specific_problem);
+        problem_solutions.push_back(solution_for_specific_problem);
     }
-
-    // finding best path
-    for(unsigned int i = 0; i < m_problems.size(); ++i)
-    {
-
-    }
-    ExpectedData data;
-    data.add_data(m_problems, problem_solutions, problem_labels);
-    
+    ExpectedData data(m_scores.get_problem_names(), problem_solutions, problem_labels);
     return data;
 }
 
 void GeneticAlgorithmBool::generate_random_population()
 {
+    // start the genetic algorithm and incremement the current generation
     ++m_current_generation;
     for(unsigned int index = 0; index < m_size_of_population; ++index)
     {
@@ -170,31 +156,31 @@ void GeneticAlgorithmBool::generate_random_population()
     }
 }
     
-void GeneticAlgorithmBool::fitness_function(const ProblemScore& scores)
+void GeneticAlgorithmBool::fitness_function(int problem_number)
 {
     std::vector<double> average_scores(m_size_of_population, 0.0);
     double active_traits;
-
     for(unsigned int index = 0; index < m_size_of_population; ++index)
     {
-        std::cout << "Individual " << index + 1 << " of generation " << m_current_generation << "\n";
         active_traits = 0.0;
+        
         for(unsigned int i = 0; i < m_number_of_traits; ++i)
         {
             if(m_generations.at(m_current_generation).at(index).at(i))
             {
-                std::cout << "Trait " << i << " is active and its score is " << scores.getScores().at(i) << "\n";
-                average_scores.at(index) += (double)scores.getScores().at(i);
+                average_scores.at(index) += m_scores.get_scores().at(problem_number).at(i);
                 ++active_traits;
             }
         }
-        average_scores.at(index) /= active_traits;
-        std::cout << "Individual average is " << average_scores.at(index) << " out of "<< active_traits << " active traits.\n";
+        if(active_traits != 0.0)
+        {
+            average_scores.at(index) /= active_traits;
+        }
     }
 
     quicksort(average_scores, 0, average_scores.size());
 
-    double median = average_scores.at(average_scores.size() / 2);
+    double radix = average_scores.at(average_scores.size() / 2);
     
     if(m_fittest_population.size() > 0)
     {
@@ -203,34 +189,37 @@ void GeneticAlgorithmBool::fitness_function(const ProblemScore& scores)
 
     for(unsigned int index = 0; index < average_scores.size(); ++index)
     {
-        if(average_scores.at(index) >= median)
+        if(average_scores.at(index) >= radix)
         {
             m_fittest_population.push_back(m_generations.at(m_current_generation).at(index));
         }
     }
 }
 
-std::vector<bool> GeneticAlgorithmBool::last_fitness_function(const ProblemScore& scores, std::vector<std::vector<bool>>& last_generation)
+std::vector<bool> GeneticAlgorithmBool::last_fitness_function(std::vector<std::vector<bool>>& last_generation, int problem_number)
 {
     std::vector<double> average_scores(m_size_of_population , 0.0);
     double active_traits;
 
+    // gather the individual's averages
     for(unsigned int index = 0; index < m_size_of_population; ++index)
     {
-        std::cout << "Individual " << index + 1 << " of generation " << m_current_generation << "\n";
         active_traits = 0.0;
         for(unsigned int i = 0; i < m_number_of_traits; ++i)
         {
             if(m_generations.at(m_current_generation).at(index).at(i))
             {
-                std::cout << "Trait " << i << " is active and its score is " << scores.getScores().at(i) << "\n";
-                average_scores.at(index) += (double)scores.getScores().at(i);
+                average_scores.at(index) += m_scores.get_scores().at(problem_number).at(i);
                 ++active_traits;
             }   
         }
-        average_scores.at(index) /= active_traits;
-        std::cout << "Individual average is " << average_scores.at(index) << " out of "<< active_traits << " active traits.\n";
+        if(active_traits != 0.0)
+        {
+            average_scores.at(index) /= active_traits;
+        }
     }
+
+    // then find the fittest individual
     unsigned int highest_score = 0, highest_index = 0;
     for(unsigned int i = 0; i < average_scores.size(); ++i)
     {
@@ -240,6 +229,7 @@ std::vector<bool> GeneticAlgorithmBool::last_fitness_function(const ProblemScore
             highest_index = i;
         }
     }
+    // then return that fittest individual
     return last_generation.at(highest_index);
 }
 
@@ -247,13 +237,12 @@ void GeneticAlgorithmBool::crossover()
 {
     std::vector<bool> child1, child2;
     int index_parent1 = -1, index_parent2 = -1;
+
     // push all the fittest population into the next generation
     for(unsigned int i = 0; i < m_fittest_population.size(); ++i)
     {
         m_generations[m_current_generation + 1].push_back(m_fittest_population.at(i));
     }
-
-    std::cout << "Fittest population size before reproduction: " << m_fittest_population.size() << "\n";
 
     // select two at random of the fittest population to reproduce
     // a new individual of the next generation and there is a coin
@@ -277,11 +266,11 @@ void GeneticAlgorithmBool::crossover()
         swap_range(child1, child2, index_start_flip, index_end_flip);
 
         // coin flip to see if the child recieves a mutation
-        if(return_random_bool())
+        if(return_rand_index(1, m_mutation_rate) == 1)
         {
             mutation(child1);
         }
-        if(return_random_bool())
+        if(return_rand_index(1, m_mutation_rate) == 1)
         {
             mutation(child2);
         }

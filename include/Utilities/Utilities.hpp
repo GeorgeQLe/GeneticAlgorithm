@@ -251,20 +251,20 @@ inline double StandardDeviation(const std::vector<double>& v)
 template <class container>
 inline void DeleteSTLContainer(container& c)
 {
-    for (container::iterator it = c.begin(); it!=c.end(); ++it)
+    for (unsigned int i = 0; i < c.size(); ++i)
     {
-        delete *it;
-        *it = NULL;
+        delete c.at(i);
+        c.at(i) = NULL;
     }
 }
 
 template <class map>
 inline void DeleteSTLMap(map& m)
 {
-    for (map::iterator it = m.begin(); it!=m.end(); ++it)
+    for (unsigned int i = 0; i < m.size(); ++i)
     {
-        delete it->second;
-        it->second = NULL;
+        delete m.second;
+        m.second = NULL;
     }
 }
 

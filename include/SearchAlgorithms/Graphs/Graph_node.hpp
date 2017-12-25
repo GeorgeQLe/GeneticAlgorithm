@@ -1,5 +1,5 @@
-#ifndef GRAPH_NODES_HPP
-#define GRAPH_NODES_HPP
+#ifndef GRAPH_NODE_HPP
+#define GRAPH_NODE_HPP
 
 #include <ostream>
 #include <fstream>
@@ -30,4 +30,4 @@ class Graph_node
     }
 };
 
-#endif // GRAPH_NODES_HPP
+#endif // GRAPH_NODE_HPP

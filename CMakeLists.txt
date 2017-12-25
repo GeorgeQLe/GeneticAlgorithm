@@ -13,19 +13,20 @@ endif()
 
 set(SRC
     build/driver.cpp
-    src/ANN/FeedForwardANN.cpp
-    src/ANN/Neurons/ANN_layers.cpp
+    #src/ANN/FeedForwardANN.cpp
+    #src/ANN/Neurons/ANN_layers.cpp
     src/GA/GeneticAlgorithmBool.cpp
+    src/Utilities/read_file.cpp
 )
 
 set(INCLUDES
-    include/ANN/Activation_Functions/activation_functions.hpp
-    include/ANN/Activation_Functions/sigmoid.hpp
-    include/ANN/Activation_Functions/step.hpp
-    include/ANN/FeedForwardANN.hpp
-    include/ANN/Neurons/ANN_layers.hpp
-    include/ANN/Neurons/ANN_neuron.hpp
-    include/CNN/convolutional_NN.hpp
+    #include/ANN/Activation_Functions/activation_functions.hpp
+    #include/ANN/Activation_Functions/sigmoid.hpp
+    #include/ANN/Activation_Functions/step.hpp
+    #include/ANN/FeedForwardANN.hpp
+    #include/ANN/Neurons/ANN_layers.hpp
+    #include/ANN/Neurons/ANN_neuron.hpp
+    #include/CNN/convolutional_NN.hpp
     include/ExpectedData/expected_data.hpp
     include/GA/GeneticAlgorithmBool.hpp
     include/SearchAlgorithms/Algorithm_types/Astar_heuristic.hpp
@@ -36,14 +37,16 @@ set(INCLUDES
     include/SearchAlgorithms/Algorithm_types/Hill_climbing.hpp
     include/SearchAlgorithms/Algorithm_types/UCS_search.hpp
     include/SearchAlgorithms/Graphs/Graph_edge.hpp
-    include/SearchAlgorithms/Graphs/Graph_nodes.hpp
+    include/SearchAlgorithms/Graphs/Graph_node.hpp
     include/SearchAlgorithms/Graphs/Nav_graph_edge.hpp
-    include/SearchAlgorithms/Graphs/Nav_graph_nodes.hpp
+    include/SearchAlgorithms/Graphs/Nav_graph_node.hpp
     include/SearchAlgorithms/Graphs/Searcher.hpp
     include/SearchAlgorithms/Graphs/Sparse_graph.hpp
     include/SearchAlgorithms/Algorithm_names.hpp
     include/SearchAlgorithms/Algorithm.hpp
     include/Utilities/2D/Vector2D.hpp
+    include/Utilities/Method_scorer.hpp
+    include/Utilities/read_file.hpp
     include/Utilities/Useful_constants.hpp
     include/Utilities/Utilities.hpp
 )
@@ -86,6 +89,9 @@ set(PROJECT_DATA
     TestProblems/prob28.map
     TestProblems/prob29.map
     TestProblems/prob30.map
+
+    TestProblems/scores.txt
+    TestProblems/solutions.txt
 )
 
 foreach(DATA ${PROJECT_DATA})

@@ -43,7 +43,12 @@
         "xtree": "cpp",
         "xutility": "cpp",
         "algorithm": "cpp",
-        "iomanip": "cpp"
+        "iomanip": "cpp",
+        "list": "cpp",
+        "ctime": "cpp",
+        "sstream": "cpp",
+        "xlocmon": "cpp",
+        "xloctime": "cpp"
     },
     "git.ignoreLimitWarning": true,
     "C_Cpp.intelliSenseEngineFallback": "Disabled"

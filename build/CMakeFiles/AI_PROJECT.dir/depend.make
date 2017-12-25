@@ -3,18 +3,16 @@
 
 CMakeFiles/AI_PROJECT.dir/driver.cpp.o: ../include/ExpectedData/expected_data.hpp
 CMakeFiles/AI_PROJECT.dir/driver.cpp.o: ../include/GA/GeneticAlgorithmBool.hpp
+CMakeFiles/AI_PROJECT.dir/driver.cpp.o: ../include/Utilities/Method_scorer.hpp
+CMakeFiles/AI_PROJECT.dir/driver.cpp.o: ../include/Utilities/read_file.hpp
 CMakeFiles/AI_PROJECT.dir/driver.cpp.o: driver.cpp
-
-CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.o: ../src/ANN/FeedForwardANN.cpp
-
-CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.o: ../include/ANN/Activation_Functions/activation_functions.hpp
-CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.o: ../include/ANN/Activation_Functions/sigmoid.hpp
-CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.o: ../include/ANN/Activation_Functions/step.hpp
-CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.o: ../include/ANN/Neurons/ANN_layers.hpp
-CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.o: ../include/ANN/Neurons/ANN_neuron.hpp
-CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.o: ../src/ANN/Neurons/ANN_layers.cpp
 
 CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.o: ../include/ExpectedData/expected_data.hpp
 CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.o: ../include/GA/GeneticAlgorithmBool.hpp
+CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.o: ../include/Utilities/Method_scorer.hpp
+CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.o: ../include/Utilities/read_file.hpp
 CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.o: ../src/GA/GeneticAlgorithmBool.cpp
+
+CMakeFiles/AI_PROJECT.dir/src/Utilities/read_file.cpp.o: ../include/Utilities/read_file.hpp
+CMakeFiles/AI_PROJECT.dir/src/Utilities/read_file.cpp.o: ../src/Utilities/read_file.cpp
 

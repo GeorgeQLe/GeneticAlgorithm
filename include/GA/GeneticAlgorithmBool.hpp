@@ -9,35 +9,49 @@
 #include <vector> // std::vector
 
 #include "ExpectedData/expected_data.hpp"
+#include "Utilities/Method_scorer.hpp"
 
 class GeneticAlgorithmBool
 {
     public:
-    static GeneticAlgorithmBool* get_instance_ptr(unsigned int number_of_traits, unsigned int size_of_initial_population, unsigned int number_of_generations) {
-        static GeneticAlgorithmBool* instance = new GeneticAlgorithmBool(number_of_traits, size_of_initial_population, number_of_generations);
+
+    // 
+    static GeneticAlgorithmBool* get_instance_ptr(std::string scores_file, std::string solutions_file, unsigned int number_of_traits, 
+                                                unsigned int size_of_initial_population, unsigned int number_of_generations, unsigned int mutation_rate) {
+        static GeneticAlgorithmBool* instance = new GeneticAlgorithmBool(scores_file, 
+                                                                        solutions_file, 
+                                                                        number_of_traits, 
+                                                                        size_of_initial_population, 
+                                                                        number_of_generations, 
+                                                                        mutation_rate);
         return instance;
     }
 
-    static std::shared_ptr<GeneticAlgorithmBool> get_instance(unsigned int number_of_traits, unsigned int size_of_initial_population, unsigned int number_of_generations) {
-        static std::shared_ptr<GeneticAlgorithmBool> instance(new GeneticAlgorithmBool(number_of_traits, size_of_initial_population, number_of_generations));
+    static std::shared_ptr<GeneticAlgorithmBool> get_instance(std::string scores_file, std::string solutions_file, unsigned int number_of_traits, 
+                                                            unsigned int size_of_initial_population, unsigned int number_of_generations, unsigned int mutation_rate) {
+        static std::shared_ptr<GeneticAlgorithmBool> instance(new GeneticAlgorithmBool(scores_file, 
+                                                                                    solutions_file, 
+                                                                                    number_of_traits, 
+                                                                                    size_of_initial_population, 
+                                                                                    number_of_generations, 
+                                                                                    mutation_rate));
         return instance;
     }
-
-    void add_problem(const std::string& filename) { m_problems.push_back(filename); }
-
     /*----------------------------------------------------------------
-        User calls this function which will return the ExpectedData 
-        that the genetic algorithm 
+        User calls this function which will return an ExpectedData 
+        class that the genetic algorithm will generate, storing a 
     ----------------------------------------------------------------*/
-    ExpectedData<std::string> generate_expected_data();
+    ExpectedData generate_expected_data();
 
     ~GeneticAlgorithmBool();
 
     private:
     // The constructor of the genetic algorithm is private because the class
     // is a singleton.
-    GeneticAlgorithmBool(unsigned int number_of_traits, unsigned int size_of_initial_population, unsigned int number_of_generations)
-        : m_number_of_traits(number_of_traits), m_size_of_population(size_of_initial_population), m_number_of_generations(number_of_generations), m_current_generation(0) { }
+    GeneticAlgorithmBool(std::string scores_file, std::string solutions_file, unsigned int number_of_traits, 
+                            unsigned int size_of_initial_population, unsigned int number_of_generations, unsigned int mutation_rate)
+        : m_scores(scores_file, solutions_file), m_number_of_traits(number_of_traits), m_size_of_population(size_of_initial_population), 
+            m_number_of_generations(number_of_generations), m_current_generation(0), m_mutation_rate(mutation_rate) { }
 
     /*-----------------------------------------------------------------
         This function generates pseudo-random sequences for each of the
@@ -52,9 +66,9 @@ class GeneticAlgorithmBool
         fittest member of the generation which will survive and 
         reproduce for the next generation. 
     -----------------------------------------------------------------*/
-    void fitness_function(const ProblemScore& scores);
+    void fitness_function(int problem_number);
 
-    std::vector<bool> last_fitness_function(const ProblemScore& scores, std::vector<std::vector<bool>>& last_generation);
+    std::vector<bool> last_fitness_function(std::vector<std::vector<bool>>& last_generation, int problem_number);
     
     /*-----------------------------------------------------------------
         Performs two point crossover on the parent organism strings.
@@ -66,15 +80,27 @@ class GeneticAlgorithmBool
     --------------------------------------------------------------------*/
     void mutation(std::vector<bool>& child);
 
+    // this holds all the generations of the genetic algorithm
     std::map<int, std::vector<std::vector<bool>>> m_generations;
-
+    // temporarily holds the fittest population for crossover
     std::vector<std::vector<bool>> m_fittest_population;
 
-    std::vector<std::string> m_problems;
+    Method_scorer m_scores;
 
+    // useful variables for the genetic algorithm during runtime
+
+    // number of traits that each individual will have
     unsigned int m_number_of_traits;
+    // population size
     unsigned int m_size_of_population;
+    // number of generations
     unsigned int m_number_of_generations;
+    // percantage survival rate (i.e. a value of 50 will be fifty percent survival rate)
+    unsigned int m_survival_rate;
+    // percentage mutation rate ()
+    unsigned int m_mutation_rate;
+
+    // counter value
     unsigned int m_current_generation;
 };
 

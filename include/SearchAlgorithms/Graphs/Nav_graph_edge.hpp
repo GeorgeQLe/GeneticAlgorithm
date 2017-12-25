@@ -3,7 +3,7 @@
 
 #include "Graph_edge.hpp"
 
-class Nav_graph_edge : public Graph_edge
+class Nav_graph_edge : protected Graph_edge
 {
     public:
     Nav_graph_edge(int from, int to, double cost)
@@ -26,6 +26,8 @@ class Nav_graph_edge : public Graph_edge
     {
         output << "From: " << edge.m_from << " To: " << edge.m_to;
         output << " Cost: " << edge.m_cost << " Id: " << edge.m_id_intersecting << "\n";
+    
+        return output;
     }
 
     protected:

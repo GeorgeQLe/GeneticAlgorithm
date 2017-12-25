@@ -150,60 +150,6 @@ driver.cpp.s:
 	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/driver.cpp.s
 .PHONY : driver.cpp.s
 
-src/ANN/FeedForwardANN.o: src/ANN/FeedForwardANN.cpp.o
-
-.PHONY : src/ANN/FeedForwardANN.o
-
-# target to build an object file
-src/ANN/FeedForwardANN.cpp.o:
-	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.o
-.PHONY : src/ANN/FeedForwardANN.cpp.o
-
-src/ANN/FeedForwardANN.i: src/ANN/FeedForwardANN.cpp.i
-
-.PHONY : src/ANN/FeedForwardANN.i
-
-# target to preprocess a source file
-src/ANN/FeedForwardANN.cpp.i:
-	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.i
-.PHONY : src/ANN/FeedForwardANN.cpp.i
-
-src/ANN/FeedForwardANN.s: src/ANN/FeedForwardANN.cpp.s
-
-.PHONY : src/ANN/FeedForwardANN.s
-
-# target to generate assembly for a file
-src/ANN/FeedForwardANN.cpp.s:
-	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.s
-.PHONY : src/ANN/FeedForwardANN.cpp.s
-
-src/ANN/Neurons/ANN_layers.o: src/ANN/Neurons/ANN_layers.cpp.o
-
-.PHONY : src/ANN/Neurons/ANN_layers.o
-
-# target to build an object file
-src/ANN/Neurons/ANN_layers.cpp.o:
-	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.o
-.PHONY : src/ANN/Neurons/ANN_layers.cpp.o
-
-src/ANN/Neurons/ANN_layers.i: src/ANN/Neurons/ANN_layers.cpp.i
-
-.PHONY : src/ANN/Neurons/ANN_layers.i
-
-# target to preprocess a source file
-src/ANN/Neurons/ANN_layers.cpp.i:
-	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.i
-.PHONY : src/ANN/Neurons/ANN_layers.cpp.i
-
-src/ANN/Neurons/ANN_layers.s: src/ANN/Neurons/ANN_layers.cpp.s
-
-.PHONY : src/ANN/Neurons/ANN_layers.s
-
-# target to generate assembly for a file
-src/ANN/Neurons/ANN_layers.cpp.s:
-	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.s
-.PHONY : src/ANN/Neurons/ANN_layers.cpp.s
-
 src/GA/GeneticAlgorithmBool.o: src/GA/GeneticAlgorithmBool.cpp.o
 
 .PHONY : src/GA/GeneticAlgorithmBool.o
@@ -231,6 +177,33 @@ src/GA/GeneticAlgorithmBool.cpp.s:
 	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.s
 .PHONY : src/GA/GeneticAlgorithmBool.cpp.s
 
+src/Utilities/read_file.o: src/Utilities/read_file.cpp.o
+
+.PHONY : src/Utilities/read_file.o
+
+# target to build an object file
+src/Utilities/read_file.cpp.o:
+	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/Utilities/read_file.cpp.o
+.PHONY : src/Utilities/read_file.cpp.o
+
+src/Utilities/read_file.i: src/Utilities/read_file.cpp.i
+
+.PHONY : src/Utilities/read_file.i
+
+# target to preprocess a source file
+src/Utilities/read_file.cpp.i:
+	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/Utilities/read_file.cpp.i
+.PHONY : src/Utilities/read_file.cpp.i
+
+src/Utilities/read_file.s: src/Utilities/read_file.cpp.s
+
+.PHONY : src/Utilities/read_file.s
+
+# target to generate assembly for a file
+src/Utilities/read_file.cpp.s:
+	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/Utilities/read_file.cpp.s
+.PHONY : src/Utilities/read_file.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -243,15 +216,12 @@ help:
 	@echo "... driver.o"
 	@echo "... driver.i"
 	@echo "... driver.s"
-	@echo "... src/ANN/FeedForwardANN.o"
-	@echo "... src/ANN/FeedForwardANN.i"
-	@echo "... src/ANN/FeedForwardANN.s"
-	@echo "... src/ANN/Neurons/ANN_layers.o"
-	@echo "... src/ANN/Neurons/ANN_layers.i"
-	@echo "... src/ANN/Neurons/ANN_layers.s"
 	@echo "... src/GA/GeneticAlgorithmBool.o"
 	@echo "... src/GA/GeneticAlgorithmBool.i"
 	@echo "... src/GA/GeneticAlgorithmBool.s"
+	@echo "... src/Utilities/read_file.o"
+	@echo "... src/Utilities/read_file.i"
+	@echo "... src/Utilities/read_file.s"
 .PHONY : help
 
 

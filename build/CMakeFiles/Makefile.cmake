@@ -38,6 +38,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../TestProblems/prob7.map"
   "../TestProblems/prob8.map"
   "../TestProblems/prob9.map"
+  "../TestProblems/scores.txt"
+  "../TestProblems/solutions.txt"
   "CMakeFiles/3.5.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.5.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.5.1/CMakeSystem.cmake"
@@ -96,6 +98,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "prob28.map"
   "prob29.map"
   "prob30.map"
+  "scores.txt"
+  "solutions.txt"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 

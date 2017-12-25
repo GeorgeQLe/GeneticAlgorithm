@@ -4,43 +4,21 @@
 #ifndef EXPECTED_DATA_HPP
 #define EXPECTED_DATA_HPP
 
+#include <iostream> // std::ostream
 #include <vector> // std::vector
 
-template<class ProblemType>
 class ExpectedData
 {
-    typedef std::vector<ProblemType> ProblemArray;
-
     public:
     ExpectedData() : m_number_of_problems(0) { }
-    ExpectedData(ProblemArray problems) 
-        : m_problems(problems), m_number_of_problems(problems.size()) { }
-
-    /*---------------------------------------------------------------
-        Adds a problem of a generic problem type to the ExpectedData
-        class's array of problems
-    ---------------------------------------------------------------*/
-    void add_problem(ProblemType problem_name) 
-    { 
-        m_problems.push_back(problem_name); 
-        ++m_number_of_problems;
-    }
-
-    /*-------------------------------------------------------------
-        Clears the current problems stored in the ExpectedData
-        class and adds new ones.
-    -------------------------------------------------------------*/
-    void add_all_problems(std::vector<ProblemType> problem_names) 
-    {
-        m_problems.clear();
-        m_problems = problem_names;
-        m_number_of_problems = problem_names.size();
-    }
+    ExpectedData(std::vector<std::string> problems, std::vector<std::vector<std::string>> problem_solutions, 
+                std::vector<std::vector<std::string>> problem_labels) 
+    : m_problems(problems), m_problem_solutions(problem_solutions), m_problem_labels(problem_labels), m_number_of_problems(problems.size()) { }
 
     // accessor functions
 
     // returns to the user 
-    ProblemType get_specific_name(int index) const 
+    std::string get_specific_name(unsigned int index) const 
     { 
         if(index < m_problems.size())
         {
@@ -50,7 +28,7 @@ class ExpectedData
 
     // returns to the user all the problems in this expected data class
     // as a vector of a generic problem type
-    ProblemArray get_problem_names() const { return m_problems; }
+    std::vector<std::string> get_problem_names() const { return m_problems; }
 
     /*----------------------------------------------------------------------- 
         comparison operator between this expected data class and another one
@@ -58,12 +36,12 @@ class ExpectedData
     friend bool operator==(const ExpectedData& first, const ExpectedData& second)
     {
         bool result = false;
-        if(first.m_number_of_problems == second->m_number_of_problems)
+        if(first.m_number_of_problems == second.m_number_of_problems)
         {
             bool mismatch_found = false;
-            for(unsigned int i = 0; i < first.m_number_of_problems.size(); ++i)
+            for(unsigned int i = 0; i < first.m_number_of_problems; ++i)
             {
-                if(first.m_problems.at(i) != second->m_problems.at(i))
+                if(first.m_problems.at(i) != second.m_problems.at(i))
                 {
                     mismatch_found = true;
                 }
@@ -76,10 +54,58 @@ class ExpectedData
         return result;
     }
 
+    friend std::ostream& operator<<(std::ostream& output, const ExpectedData& data)
+    {
+        output << "Hello, the genetic algorithm has completed. Let's review the results of this algorithm\n";
+        for(unsigned int i = 0; i < data.m_number_of_problems; ++i)
+        {
+            output << "For problem " << i + 1 << ", the best ";
+            if(data.m_problem_labels.at(i).size() > 1)
+            {
+                output << "solutions to solve it are:\n\t";
+                for(unsigned int j = 0; j < data.m_problem_labels.at(i).size(); ++j)
+                {
+                    output << data.m_problem_labels.at(i).at(j) << "\n\t";
+                }
+            }
+            else if(data.m_problem_labels.at(i).size() == 1)
+            {
+                output << "solution to solve it is:\n\t" << data.m_problem_labels.at(i).at(0) << "\n";
+            }
+            output << "\n";
+
+            if(data.m_problem_solutions.at(i).size() > 1)
+            {
+                output << "The solutions to this problem are:\n";
+                for(unsigned int j = 0; j < data.m_problem_solutions.at(i).size(); ++j)
+                {
+                    output << "\t" << data.m_problem_labels.at(i).at(j) << "\n";
+                    output << data.m_problem_solutions.at(i).at(j) << "\n\n";
+                }
+            }
+            else if(data.m_problem_solutions.at(i).size() == 1)
+            {
+                output << "The solution to this problem is:\n";
+                output << "\t" << data.m_problem_labels.at(i).at(0) << "\n";
+                output << data.m_problem_solutions.at(i).at(0) << "\n\n";
+            }
+        }
+        
+        return output;
+    }
+
+    void operator=(const ExpectedData& rhs)
+    {
+        this->m_problems = rhs.m_problems;
+        this->m_problem_solutions = rhs.m_problem_solutions;
+        this->m_problem_labels = rhs.m_problem_labels;
+        this->m_number_of_problems = rhs.m_number_of_problems;
+    }
+
     private:
-    // holds the problems of the type that the user will specify when
-    // creating the ExpectedData class
-    ProblemArray m_problems;
+    std::vector<std::string> m_problems;
+    std::vector<std::vector<std::string>> m_problem_solutions;
+    std::vector<std::vector<std::string>> m_problem_labels;
     
     unsigned int m_number_of_problems;
 };

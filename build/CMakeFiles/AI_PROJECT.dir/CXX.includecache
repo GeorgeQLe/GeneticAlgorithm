@@ -6,31 +6,9 @@
 
 #IncludeRegexTransform: 
 
-../include/ANN/Activation_Functions/activation_functions.hpp
-step.hpp
-../include/ANN/Activation_Functions/step.hpp
-sigmoid.hpp
-../include/ANN/Activation_Functions/sigmoid.hpp
-
-../include/ANN/Activation_Functions/sigmoid.hpp
-
-../include/ANN/Activation_Functions/step.hpp
-
-../include/ANN/Neurons/ANN_layers.hpp
-map
--
-ANN/Activation_Functions/activation_functions.hpp
-../include/ANN/Neurons/ANN/Activation_Functions/activation_functions.hpp
-ANN_neuron.hpp
-../include/ANN/Neurons/ANN_neuron.hpp
-
-../include/ANN/Neurons/ANN_neuron.hpp
-memory
--
-vector
--
-
 ../include/ExpectedData/expected_data.hpp
+iostream
+-
 vector
 -
 
@@ -43,22 +21,30 @@ vector
 -
 ExpectedData/expected_data.hpp
 ../include/GA/ExpectedData/expected_data.hpp
+Utilities/Method_scorer.hpp
+../include/GA/Utilities/Method_scorer.hpp
+
+../include/Utilities/Method_scorer.hpp
+iostream
+-
+list
+-
+vector
+-
+read_file.hpp
+../include/Utilities/read_file.hpp
+
+../include/Utilities/read_file.hpp
+string
+-
+vector
+-
 
 /mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/build/driver.cpp
 iostream
 -
 GA/GeneticAlgorithmBool.hpp
 /mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/build/GA/GeneticAlgorithmBool.hpp
-
-/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/src/ANN/FeedForwardANN.cpp
-cmath
--
-include/ANN/FeedForwardANN.hpp
-/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/src/ANN/include/ANN/FeedForwardANN.hpp
-
-/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/src/ANN/Neurons/ANN_layers.cpp
-ANN/Neurons/ANN_layers.hpp
-/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/src/ANN/Neurons/ANN/Neurons/ANN_layers.hpp
 
 /mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/src/GA/GeneticAlgorithmBool.cpp
 algorithm
@@ -69,4 +55,16 @@ iostream
 -
 GA/GeneticAlgorithmBool.hpp
 /mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/src/GA/GA/GeneticAlgorithmBool.hpp
+
+/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/src/Utilities/read_file.cpp
+cstdlib
+-
+fstream
+-
+iostream
+-
+string
+-
+Utilities/read_file.hpp
+/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/src/Utilities/Utilities/read_file.hpp
 

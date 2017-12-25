@@ -81,57 +81,9 @@ CMakeFiles/AI_PROJECT.dir/driver.cpp.o.provides: CMakeFiles/AI_PROJECT.dir/drive
 CMakeFiles/AI_PROJECT.dir/driver.cpp.o.provides.build: CMakeFiles/AI_PROJECT.dir/driver.cpp.o
 
 
-CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.o: CMakeFiles/AI_PROJECT.dir/flags.make
-CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.o: ../src/ANN/FeedForwardANN.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.o -c "/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/src/ANN/FeedForwardANN.cpp"
-
-CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/src/ANN/FeedForwardANN.cpp" > CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.i
-
-CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/src/ANN/FeedForwardANN.cpp" -o CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.s
-
-CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.o.requires:
-
-.PHONY : CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.o.requires
-
-CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.o.provides: CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.o.requires
-	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.o.provides.build
-.PHONY : CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.o.provides
-
-CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.o.provides.build: CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.o
-
-
-CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.o: CMakeFiles/AI_PROJECT.dir/flags.make
-CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.o: ../src/ANN/Neurons/ANN_layers.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.o -c "/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/src/ANN/Neurons/ANN_layers.cpp"
-
-CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/src/ANN/Neurons/ANN_layers.cpp" > CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.i
-
-CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/src/ANN/Neurons/ANN_layers.cpp" -o CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.s
-
-CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.o.requires:
-
-.PHONY : CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.o.requires
-
-CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.o.provides: CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.o.requires
-	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.o.provides.build
-.PHONY : CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.o.provides
-
-CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.o.provides.build: CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.o
-
-
 CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.o: CMakeFiles/AI_PROJECT.dir/flags.make
 CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.o: ../src/GA/GeneticAlgorithmBool.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.o -c "/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/src/GA/GeneticAlgorithmBool.cpp"
 
 CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.i: cmake_force
@@ -153,23 +105,45 @@ CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.o.provides: CMakeFiles
 CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.o.provides.build: CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.o
 
 
+CMakeFiles/AI_PROJECT.dir/src/Utilities/read_file.cpp.o: CMakeFiles/AI_PROJECT.dir/flags.make
+CMakeFiles/AI_PROJECT.dir/src/Utilities/read_file.cpp.o: ../src/Utilities/read_file.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/AI_PROJECT.dir/src/Utilities/read_file.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AI_PROJECT.dir/src/Utilities/read_file.cpp.o -c "/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/src/Utilities/read_file.cpp"
+
+CMakeFiles/AI_PROJECT.dir/src/Utilities/read_file.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AI_PROJECT.dir/src/Utilities/read_file.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/src/Utilities/read_file.cpp" > CMakeFiles/AI_PROJECT.dir/src/Utilities/read_file.cpp.i
+
+CMakeFiles/AI_PROJECT.dir/src/Utilities/read_file.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AI_PROJECT.dir/src/Utilities/read_file.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/src/Utilities/read_file.cpp" -o CMakeFiles/AI_PROJECT.dir/src/Utilities/read_file.cpp.s
+
+CMakeFiles/AI_PROJECT.dir/src/Utilities/read_file.cpp.o.requires:
+
+.PHONY : CMakeFiles/AI_PROJECT.dir/src/Utilities/read_file.cpp.o.requires
+
+CMakeFiles/AI_PROJECT.dir/src/Utilities/read_file.cpp.o.provides: CMakeFiles/AI_PROJECT.dir/src/Utilities/read_file.cpp.o.requires
+	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/Utilities/read_file.cpp.o.provides.build
+.PHONY : CMakeFiles/AI_PROJECT.dir/src/Utilities/read_file.cpp.o.provides
+
+CMakeFiles/AI_PROJECT.dir/src/Utilities/read_file.cpp.o.provides.build: CMakeFiles/AI_PROJECT.dir/src/Utilities/read_file.cpp.o
+
+
 # Object files for target AI_PROJECT
 AI_PROJECT_OBJECTS = \
 "CMakeFiles/AI_PROJECT.dir/driver.cpp.o" \
-"CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.o" \
-"CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.o" \
-"CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.o"
+"CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.o" \
+"CMakeFiles/AI_PROJECT.dir/src/Utilities/read_file.cpp.o"
 
 # External object files for target AI_PROJECT
 AI_PROJECT_EXTERNAL_OBJECTS =
 
 AI_PROJECT: CMakeFiles/AI_PROJECT.dir/driver.cpp.o
-AI_PROJECT: CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.o
-AI_PROJECT: CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.o
 AI_PROJECT: CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.o
+AI_PROJECT: CMakeFiles/AI_PROJECT.dir/src/Utilities/read_file.cpp.o
 AI_PROJECT: CMakeFiles/AI_PROJECT.dir/build.make
 AI_PROJECT: CMakeFiles/AI_PROJECT.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable AI_PROJECT"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable AI_PROJECT"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/AI_PROJECT.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -178,9 +152,8 @@ CMakeFiles/AI_PROJECT.dir/build: AI_PROJECT
 .PHONY : CMakeFiles/AI_PROJECT.dir/build
 
 CMakeFiles/AI_PROJECT.dir/requires: CMakeFiles/AI_PROJECT.dir/driver.cpp.o.requires
-CMakeFiles/AI_PROJECT.dir/requires: CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.o.requires
-CMakeFiles/AI_PROJECT.dir/requires: CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.o.requires
 CMakeFiles/AI_PROJECT.dir/requires: CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.o.requires
+CMakeFiles/AI_PROJECT.dir/requires: CMakeFiles/AI_PROJECT.dir/src/Utilities/read_file.cpp.o.requires
 
 .PHONY : CMakeFiles/AI_PROJECT.dir/requires
 

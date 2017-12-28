@@ -1,5 +1,6 @@
-/*
+/*	Copyright 2017 George Le
 
+	Generic artificial neural network neurons for each of the three layers.
 */
 
 #ifndef ANN_LAYERS_HPP
@@ -9,6 +10,33 @@
 
 #include "ANN/Activation_Functions/activation_functions.hpp"
 #include "ANN_neuron.hpp"
+
+typedef enum layer_name { NO_LAYER_NAME = 0, INPUT_LAYER_NEURON, HIDDEN_LAYER_NEURON, OUTPUT_LAYER_NEURON } Layer_name;
+
+/*-----------------------------------------------------------------------------------------
+|    The InputLayerNeuron takes in values that are contextually available to the neural   |	
+|    network to use in solving the problem posed to the neural network. These values must |
+|    be translated in some form to doubles if they are not 	 							  |
+------------------------------------------------------------------------------------------*/
+class InputLayerNeuron : protected Neuron
+{
+public:
+	InputLayerNeuron::InputLayerNeuron(double value) : Neuron(value) { }
+
+	// accessor function
+	double get_value() const { return m_neuron_value; }
+
+	// overloaded insertion and extraction operators
+	friend std::ostream& operator<<(std::ostream& output, const InputLayerNeuron& neuron) { return output << neuron.get_value(); }
+	friend std::istream& operator>>(std::istream& input, InputLayerNeuron& neuron) { return input >> neuron.m_neuron_value; }
+
+	// overloaded assignment operator
+	void operator=(const InputLayerNeuron& neuron) { m_neuron_value = neuron.m_neuron_value; }
+
+private:
+	// default constructor is private to prevent the use of the neuron in the input layer without providing a input value
+	InputLayerNeuron() { }
+};
 
 /*-------------------------------------------------------------------------------  
 |	Neurons in the hidden layer work as filters for the neural network being	|
@@ -29,6 +57,8 @@ public:
 	double get_input_vector(int index) { return m_input_vectors.at(index); }
 	double get_input_weight(int index) { return m_input_weight.at(index); }
 	double get_bias() { return m_bias; }
+
+	double get_value() const { return m_neuron_value; }
 
 	void calculate_output(Activation_function<Sigmoid> function_to_be_used);
 
@@ -60,31 +90,6 @@ private:
 	HiddenLayerNeuron() { }
 };
 
-/*-----------------------------------------------------------------------------------------
-|    The InputLayerNeuron takes in values that are contextually available to the neural   |	
-|    network to use in solving the problem posed to the neural network. These values must |
-|    be translated in some form to doubles if they are not 	 							  |
-------------------------------------------------------------------------------------------*/
-class InputLayerNeuron : protected Neuron
-{
-public:
-	InputLayerNeuron::InputLayerNeuron(double value) : Neuron(value) { }
-
-	// accessor function
-	double get_value() const { return m_neuron_value; }
-
-	// overloaded insertion and extraction operators
-	friend std::ostream& operator<<(std::ostream& output, const InputLayerNeuron& neuron) { return output << neuron.get_value(); }
-	friend std::istream& operator>>(std::istream& input, InputLayerNeuron& neuron) { return input >> neuron.m_neuron_value; }
-
-	// overloaded assignment operator
-	void operator=(const InputLayerNeuron& neuron) { m_neuron_value = neuron.m_neuron_value; }
-
-private:
-	// default constructor is private to prevent the use of the neuron in the input layer without providing a input value
-	InputLayerNeuron() { }
-};
-
 class OutputLayerNeuron : public HiddenLayerNeuron
 {
 public:
@@ -95,6 +100,7 @@ public:
 
 	// accessor function
 	double get_value() const { return m_neuron_value; }
+
 	std::string get_value_representation(std::pair<double, double> range_of_value) const { return representation_of_neuron.at(range_of_value); }
 
 	// mutator function

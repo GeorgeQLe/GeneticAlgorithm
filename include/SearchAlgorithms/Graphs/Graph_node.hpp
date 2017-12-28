@@ -7,12 +7,14 @@
 class Graph_node
 {
     protected:
-    // every node has an index. A valid index is >= 0
+    // every node has a record of the layer it is a part of
+    int m_layer;
+    // every node has an index
     int m_index;
 
     public:
-    Graph_node() : m_index(-1) { }
-    Graph_node(int index) : m_index(index) { }
+    Graph_node(int layer, int index) : m_layer(layer), m_index(index) { }
+    
     Graph_node(std::ifstream& stream) { 
         char buffer[50];
         stream >> buffer >> m_index;

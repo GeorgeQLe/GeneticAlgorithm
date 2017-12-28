@@ -8,7 +8,7 @@
 #include <string>
 #include <vector>
 
-#include "ANN/ANN_neuron.hpp"
+#include "ANN/Neurons/ANN_layers.hpp"
 
 class ConvolutionalNeuralNetwork 
 {

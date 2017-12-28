@@ -1,57 +1,45 @@
 /*  Copyright 2017 George Le
 
 */
-#ifndef GENETIC_ALGORITHM_HPP
-#define GENETIC_ALGORITHM_HPP
+#ifndef GENETIC_ALGORITHM_BOOL_HPP
+#define GENETIC_ALGORITHM_BOOL_HPP
 
-#include <map> // std::map
-#include <memory> // std::shared_ptr
+#include <utility> // std::pair
 #include <vector> // std::vector
 
-#include "ExpectedData/expected_data.hpp"
-#include "Utilities/Method_scorer.hpp"
+typedef std::vector<bool> Individual;
+typedef std::vector<Individual> Population;
+typedef std::vector<double> Scores;
 
 class GeneticAlgorithmBool
 {
     public:
-
-    // 
-    static GeneticAlgorithmBool* get_instance_ptr(std::string scores_file, std::string solutions_file, unsigned int number_of_traits, 
-                                                unsigned int size_of_initial_population, unsigned int number_of_generations, unsigned int mutation_rate) {
-        static GeneticAlgorithmBool* instance = new GeneticAlgorithmBool(scores_file, 
-                                                                        solutions_file, 
-                                                                        number_of_traits, 
-                                                                        size_of_initial_population, 
-                                                                        number_of_generations, 
-                                                                        mutation_rate);
+    // singleton accessor function
+    static GeneticAlgorithmBool* get_instance()
+    {
+        GeneticAlgorithmBool* instance = new GeneticAlgorithmBool();
         return instance;
     }
 
-    static std::shared_ptr<GeneticAlgorithmBool> get_instance(std::string scores_file, std::string solutions_file, unsigned int number_of_traits, 
-                                                            unsigned int size_of_initial_population, unsigned int number_of_generations, unsigned int mutation_rate) {
-        static std::shared_ptr<GeneticAlgorithmBool> instance(new GeneticAlgorithmBool(scores_file, 
-                                                                                    solutions_file, 
-                                                                                    number_of_traits, 
-                                                                                    size_of_initial_population, 
-                                                                                    number_of_generations, 
-                                                                                    mutation_rate));
-        return instance;
-    }
-    /*----------------------------------------------------------------
-        User calls this function which will return an ExpectedData 
-        class that the genetic algorithm will generate, storing a 
-    ----------------------------------------------------------------*/
-    ExpectedData generate_expected_data();
+    // mutator functions
+    void set_number_of_traits(unsigned int number_traits) { m_number_of_traits = number_traits; }
+    void set_size_of_population(unsigned int size_population) { m_size_of_population = size_population; }
+    void set_number_of_generations(unsigned int number_generations) { m_number_of_generations = number_generations; }
+    void set_survival_rate(unsigned int survival_rate) { m_survival_rate = survival_rate; }
+    void set_mutation_rate(unsigned int mutation_rate) { m_mutation_rate = mutation_rate; }
+
+    /*--------------------------------------------------------------------
+        User calls this function which will return the fittest individual
+        that the genetic algorithm will generate. 
+    --------------------------------------------------------------------*/
+    Individual generate_expected_data();
 
     ~GeneticAlgorithmBool();
 
     private:
     // The constructor of the genetic algorithm is private because the class
     // is a singleton.
-    GeneticAlgorithmBool(std::string scores_file, std::string solutions_file, unsigned int number_of_traits, 
-                            unsigned int size_of_initial_population, unsigned int number_of_generations, unsigned int mutation_rate)
-        : m_scores(scores_file, solutions_file), m_number_of_traits(number_of_traits), m_size_of_population(size_of_initial_population), 
-            m_number_of_generations(number_of_generations), m_current_generation(0), m_mutation_rate(mutation_rate) { }
+    GeneticAlgorithmBool() : m_number_of_traits(1), m_size_of_population(10), m_number_of_generations(10), m_survival_rate(10), m_mutation_rate(1) { }
 
     /*-----------------------------------------------------------------
         This function generates pseudo-random sequences for each of the
@@ -62,13 +50,19 @@ class GeneticAlgorithmBool
     void generate_random_population();
     
     /*-----------------------------------------------------------------
-        This function determines which member of the population is the
+        This function determines which members of the population is the
         fittest member of the generation which will survive and 
         reproduce for the next generation. 
     -----------------------------------------------------------------*/
-    void fitness_function(int problem_number);
+    void fitness_function();
 
-    std::vector<bool> last_fitness_function(std::vector<std::vector<bool>>& last_generation, int problem_number);
+    /*-----------------------------------------------------------------
+        This function determines which membersof the population is the
+        fittest member of the last generation which will be returned 
+        by the genetic algorithm and be parsed by a GA information
+        table.
+    -----------------------------------------------------------------*/
+    Individual last_fitness_function(const Population& last_generation);
     
     /*-----------------------------------------------------------------
         Performs two point crossover on the parent organism strings.
@@ -78,30 +72,36 @@ class GeneticAlgorithmBool
     /*--------------------------------------------------------------------
         Performs a bit string mutation on the child of the new generation.
     --------------------------------------------------------------------*/
-    void mutation(std::vector<bool>& child);
+    void bit_string_mutation(Individual& child);
 
-    // this holds all the generations of the genetic algorithm
-    std::map<int, std::vector<std::vector<bool>>> m_generations;
+    /*
+        Member variables of the Genetic Algorithm
+    */
+
+    // this holds the current and the previous generations of the genetic algorithm
+    std::pair<Population, Population> m_generations; // std::pair<std::vector<std::vector<bool>>, std::vector<std::vector<bool>>> 
+                                                    // the first population is the current generation
+                                                    // the second population is the next generation
     // temporarily holds the fittest population for crossover
-    std::vector<std::vector<bool>> m_fittest_population;
-
-    Method_scorer m_scores;
+    Population m_fittest_population; // std::vector<std::vector<bool>
+    // this holds the scores for each of the individual's traits
+    Scores m_method_scores;
 
     // useful variables for the genetic algorithm during runtime
 
     // number of traits that each individual will have
-    unsigned int m_number_of_traits;
+    unsigned int m_number_of_traits; // default 1
     // population size
-    unsigned int m_size_of_population;
+    unsigned int m_size_of_population; // default 10
     // number of generations
-    unsigned int m_number_of_generations;
+    unsigned int m_number_of_generations; // default 10
     // percantage survival rate (i.e. a value of 50 will be fifty percent survival rate)
-    unsigned int m_survival_rate;
-    // percentage mutation rate ()
-    unsigned int m_mutation_rate;
+    unsigned int m_survival_rate; // default 10
+    // percentage mutation rate (i.e. a value of 1 will be one percent mutation rate)
+    unsigned int m_mutation_rate; // default 1
 
     // counter value
-    unsigned int m_current_generation;
+    unsigned int m_current_generation; // starting generation is zero (incremented after generating first random generation)
 };
 
-#endif // GENETIC_ALGORITHM_HPP
+#endif // GENETIC_ALGORITHM_BOOL_HPP

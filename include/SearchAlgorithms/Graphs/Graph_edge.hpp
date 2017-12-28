@@ -7,8 +7,7 @@
 class Graph_edge
 {
     public:
-    Graph_edge(int from, int to, double cost) 
-        : m_from(from), m_to(to), m_cost(cost) { }
+    Graph_edge(int from, int to, double cost) : m_from(from), m_to(to), m_cost(cost) { }
 
     Graph_edge(int from, int to) : m_from(from), m_to(to), m_cost(1.0) { }
 
@@ -51,10 +50,13 @@ class Graph_edge
     }
 
     protected:
-    int m_from;
-    int m_to;
+    int layer_from; // stores which layer of the graph the source node is in
+    int layer_to; // stores which layer of the graph the destination node is in
 
-    double m_cost;
+    int m_from; // stores the index of the from node in the layer
+    int m_to; // stores the index of the to node in the layer
+
+    double m_cost; // stores the cost of traversing this edge
 };
 
 #endif // GRAPH_EDGE_HPP

@@ -1,17 +1,16 @@
 #ifndef NAV_GRAPH_NODE_HPP
 #define NAV_GRAPH_NODE_HPP
 
-#include "Utilities/2D/Vector2D.hpp"
 #include "Graph_node.hpp"
+#include "Utilities/2D/Vector2D.hpp"
 
 template<class Occupant = void*>
 class Nav_graph_node : public Graph_node
 {
     public:
-    Nav_graph_node() : m_occupant(Occupant()) { }
+    Nav_graph_node(int layer, int index) : Graph_node(layer, index), m_occupant(Occupant()) { }
 
-    Nav_graph_node(int index, Vector2D position) 
-        : Graph_node(index), m_position(position), m_occupant(Occupant()) { }
+    Nav_graph_node(int layer, int index, Vector2D position) : Graph_node(layer, index), m_position(position), m_occupant(Occupant()) { }
 
     Nav_graph_node(std::ifstream& stream) : m_occupant(Occupant()) { }
 
@@ -32,8 +31,11 @@ class Nav_graph_node : public Graph_node
     }
 
     protected:
+    // optional record of the coordinates that this node lies on 
+    // in the environment space
     Vector2D m_position;
 
+    // optional storage of a handle to the occupant of this node
     Occupant m_occupant;
 };
 

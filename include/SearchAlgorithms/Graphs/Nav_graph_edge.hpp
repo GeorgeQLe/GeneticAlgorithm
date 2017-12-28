@@ -6,11 +6,9 @@
 class Nav_graph_edge : protected Graph_edge
 {
     public:
-    Nav_graph_edge(int from, int to, double cost)
-        : Graph_edge(from, to, cost), m_id_intersecting(-1) { }
+    Nav_graph_edge(int from, int to, double cost) : Graph_edge(from, to, cost), m_id_intersecting(-1) { }
 
-    Nav_graph_edge(int from, int to, double cost, int id)
-        : Graph_edge(from, to, cost), m_id_intersecting(id) { }
+    Nav_graph_edge(int from, int to, double cost, int id) : Graph_edge(from, to, cost), m_id_intersecting(id) { }
 
     Nav_graph_edge(std::ifstream& stream)
     {

@@ -1,16 +1,14 @@
 #ifndef SEARCHER_HPP
 #define SEARCHER_HPP
 
-#include <list>
+#include <vector>
 
 class Searcher
 {
     public:
     
     private:
-    std::list<int> m_path;
-
-    
+    std::vector<int> m_path;
 };
 
 #endif // SEARCHER_HPP

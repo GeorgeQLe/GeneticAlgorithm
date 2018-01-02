@@ -7,6 +7,6 @@
 
 int main()
 {
-   
+    GeneticAlgorithmBool instance = GeneticAlgorithmBool::get_instance();
     return 0;
 }

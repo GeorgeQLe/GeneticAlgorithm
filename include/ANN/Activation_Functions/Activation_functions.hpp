@@ -1,11 +1,13 @@
+/*  Copyright 2017 George Le
+
+*/
 #ifndef ACTIVATION_FUNCTIONS_HPP
 #define ACTIVATION_FUNCTIONS_HPP
 
-#include "step.hpp"
-#include "sigmoid.hpp"
+#include "Activation_functions_types.hpp"
 
 template<class ActivationFunctionType>
-class Activation_function
+class Activation_function 
 {
     public:
     Activation_function() :m_value(0) { }

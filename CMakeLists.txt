@@ -13,10 +13,11 @@ endif()
 
 set(SRC
     build/driver.cpp
-    #src/ANN/FeedForwardANN.cpp
-    #src/ANN/Neurons/ANN_layers.cpp
+    src/ANN/FeedForwardANN.cpp
+    src/ANN/Neurons/ANN_layers.cpp
     src/GA/GeneticAlgorithmBool.cpp
-    src/Utilities/read_file.cpp
+    src/Utilities/Graphs/Finite_graph.cpp
+    src/Utilities/Method_scorer.cpp
 )
 
 set(INCLUDES
@@ -36,17 +37,16 @@ set(INCLUDES
     include/SearchAlgorithms/Algorithm_types/DFS_search.hpp
     include/SearchAlgorithms/Algorithm_types/Hill_climbing.hpp
     include/SearchAlgorithms/Algorithm_types/UCS_search.hpp
+    include/SearchAlgorithms/Graphs/Finite_graph.hpp
     include/SearchAlgorithms/Graphs/Graph_edge.hpp
     include/SearchAlgorithms/Graphs/Graph_node.hpp
     include/SearchAlgorithms/Graphs/Nav_graph_edge.hpp
     include/SearchAlgorithms/Graphs/Nav_graph_node.hpp
     include/SearchAlgorithms/Graphs/Searcher.hpp
-    include/SearchAlgorithms/Graphs/Sparse_graph.hpp
     include/SearchAlgorithms/Algorithm_names.hpp
     include/SearchAlgorithms/Algorithm.hpp
     include/Utilities/2D/Vector2D.hpp
     include/Utilities/Method_scorer.hpp
-    include/Utilities/read_file.hpp
     include/Utilities/Useful_constants.hpp
     include/Utilities/Utilities.hpp
 )
@@ -57,43 +57,3 @@ add_executable(${PROJECT_NAME}
     ${SRC}
     ${INCLUDES}
 )
-
-set(PROJECT_DATA
-    TestProblems/prob1.map
-    TestProblems/prob2.map
-    TestProblems/prob3.map
-    TestProblems/prob4.map
-    TestProblems/prob5.map
-    TestProblems/prob6.map
-    TestProblems/prob7.map
-    TestProblems/prob8.map
-    TestProblems/prob9.map
-    TestProblems/prob10.map
-    TestProblems/prob11.map
-    TestProblems/prob12.map
-    TestProblems/prob13.map
-    TestProblems/prob14.map
-    TestProblems/prob15.map
-    TestProblems/prob16.map
-    TestProblems/prob17.map
-    TestProblems/prob18.map
-    TestProblems/prob19.map
-    TestProblems/prob20.map
-    TestProblems/prob21.map
-    TestProblems/prob22.map
-    TestProblems/prob23.map
-    TestProblems/prob24.map
-    TestProblems/prob25.map
-    TestProblems/prob26.map
-    TestProblems/prob27.map
-    TestProblems/prob28.map
-    TestProblems/prob29.map
-    TestProblems/prob30.map
-
-    TestProblems/scores.txt
-    TestProblems/solutions.txt
-)
-
-foreach(DATA ${PROJECT_DATA})
-    configure_file(${DATA} ${CMAKE_CURRENT_BINARY_DIR}/${DATA_FILENAME} COPYONLY)
-endforeach()

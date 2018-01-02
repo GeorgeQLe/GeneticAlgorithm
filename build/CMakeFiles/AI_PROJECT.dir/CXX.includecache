@@ -6,35 +6,73 @@
 
 #IncludeRegexTransform: 
 
-../include/ExpectedData/expected_data.hpp
+../include/ANN/Activation_Functions/Activation_functions.hpp
+Activation_functions_types.hpp
+../include/ANN/Activation_Functions/Activation_functions_types.hpp
+
+../include/ANN/Activation_Functions/Activation_functions_types.hpp
+cmath
+-
+
+../include/ANN/FeedForwardANN.hpp
+map
+-
+memory
+-
+utility
+-
+vector
+-
+Neurons/ANN_layers.hpp
+../include/ANN/Neurons/ANN_layers.hpp
+
+../include/ANN/Neurons/ANN_layers.hpp
 iostream
+-
+map
+-
+ANN/Activation_Functions/Activation_functions.hpp
+../include/ANN/Neurons/ANN/Activation_Functions/Activation_functions.hpp
+ANN_neuron.hpp
+../include/ANN/Neurons/ANN_neuron.hpp
+
+../include/ANN/Neurons/ANN_neuron.hpp
+memory
 -
 vector
 -
 
 ../include/GA/GeneticAlgorithmBool.hpp
-map
--
 memory
 -
+utility
+-
 vector
 -
-ExpectedData/expected_data.hpp
-../include/GA/ExpectedData/expected_data.hpp
-Utilities/Method_scorer.hpp
-../include/GA/Utilities/Method_scorer.hpp
+
+../include/SearchAlgorithms/Graphs/Finite_graph.hpp
+map
+-
+utility
+-
+vector
+-
+Graph_edge.hpp
+../include/SearchAlgorithms/Graphs/Graph_edge.hpp
+Graph_node.hpp
+../include/SearchAlgorithms/Graphs/Graph_node.hpp
+
+../include/SearchAlgorithms/Graphs/Graph_edge.hpp
+ostream
+-
+fstream
+-
+
+../include/SearchAlgorithms/Graphs/Graph_node.hpp
+ostream
+-
 
 ../include/Utilities/Method_scorer.hpp
-iostream
--
-list
--
-vector
--
-read_file.hpp
-../include/Utilities/read_file.hpp
-
-../include/Utilities/read_file.hpp
 string
 -
 vector
@@ -46,25 +84,29 @@ iostream
 GA/GeneticAlgorithmBool.hpp
 /mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/build/GA/GeneticAlgorithmBool.hpp
 
+/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/src/ANN/FeedForwardANN.cpp
+ANN/FeedForwardANN.hpp
+/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/src/ANN/ANN/FeedForwardANN.hpp
+
+/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/src/ANN/Neurons/ANN_layers.cpp
+ANN/Neurons/ANN_layers.hpp
+/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/src/ANN/Neurons/ANN/Neurons/ANN_layers.hpp
+
 /mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/src/GA/GeneticAlgorithmBool.cpp
 algorithm
 -
-random
--
 iostream
+-
+random
 -
 GA/GeneticAlgorithmBool.hpp
 /mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/src/GA/GA/GeneticAlgorithmBool.hpp
 
-/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/src/Utilities/read_file.cpp
-cstdlib
--
-fstream
--
-iostream
--
-string
--
-Utilities/read_file.hpp
-/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/src/Utilities/Utilities/read_file.hpp
+/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/src/Utilities/Graphs/Finite_graph.cpp
+SearchAlgorithms/Graphs/Finite_graph.hpp
+/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/src/Utilities/Graphs/SearchAlgorithms/Graphs/Finite_graph.hpp
+
+/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/src/Utilities/Method_scorer.cpp
+Utilities/Method_scorer.hpp
+/mnt/c/Users/George Le/Documents/GitHub/portfolio/AI_projects/src/Utilities/Utilities/Method_scorer.hpp
 

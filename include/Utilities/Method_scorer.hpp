@@ -6,11 +6,8 @@
 #ifndef METHOD_SCORER_HPP
 #define METHOD_SCORER_HPP
 
-#include <iostream>
-#include <list>
-#include <vector>
-
-#include "read_file.hpp"
+#include <string> // std::string
+#include <vector> // std::vector
 
 class Method_scorer
 {

@@ -28,7 +28,7 @@ bool return_random_bool()
 
 bool percentage_chance(unsigned int percentage_chance)
 {
-    int num = return_rand_index(1, 100);
+    unsigned int num = return_rand_index(1, 100);
 
     if(num <= percentage_chance)
     {
@@ -83,11 +83,19 @@ void quicksort(std::vector<double>& list, unsigned int left, unsigned int right)
     }
 }
 
-void swap_range(std::vector<bool>& child1, std::vector<bool>& child2, unsigned int start_point, unsigned int end_point)
+struct Swap_points
+{
+    Swap_points(unsigned int new_start_point, unsigned int new_end_point) : start_point(new_start_point), end_point(new_end_point) { }
+
+    unsigned int start_point;
+    unsigned int end_point;
+};
+
+void swap_range(std::vector<bool>& child1, std::vector<bool>& child2, Swap_points start_and_end)
 {
     if(child1.size() == child2.size())
     {
-        for(unsigned int i = start_point; i < end_point; ++i)
+        for(unsigned int i = start_and_end.start_point; i < start_and_end.end_point; ++i)
         {
             std::swap(child1.at(i), child2.at(i));
         }
@@ -258,8 +266,8 @@ void GeneticAlgorithmBool::crossover()
     while(m_generations.second.size() < m_size_of_population)
     {
         // generates where the start and the end points of the uniform crossover
-        int index_start_flip = return_rand_index(0, m_number_of_traits - 2);
-        int index_end_flip = return_rand_index(index_start_flip + 1, m_number_of_traits - 1);
+        unsigned int index_start_flip = return_rand_index(0, m_number_of_traits - 2);
+        unsigned int index_end_flip = return_rand_index(index_start_flip + 1, m_number_of_traits - 1);
         
         // randomly selects two parents
         index_parent1 = return_rand_index(0, m_fittest_population.size() - 1);
@@ -270,7 +278,7 @@ void GeneticAlgorithmBool::crossover()
         child2 = m_fittest_population.at(index_parent2);
 
         // applies the crossover to the children at the randomly generated start and end points
-        swap_range(child1, child2, index_start_flip, index_end_flip);
+        swap_range(child1, child2, { index_start_flip, index_end_flip });
 
         // coin flip to see if the child recieves a mutation
         if(percentage_chance(m_mutation_rate))

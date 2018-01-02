@@ -3,8 +3,6 @@
 Implementation of functions belonging to the FF_ANN and Neuron class
 
 */
-#include <cmath> // exp()
-
 #include "ANN/FeedForwardANN.hpp"
 
 bool FF_ANN::push_back(std::vector<InputLayerNeuron> layer)
@@ -65,7 +63,7 @@ std::string FF_ANN::evaluate_neural_net()
 	double value = 0.0;
 	int index = 0, max_index = 0;
 
-	
+	// ANN_activation.m_activation_function.sigmoid_function();
 
 	return std::string();
 }

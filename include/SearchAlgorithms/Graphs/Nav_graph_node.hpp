@@ -8,11 +8,9 @@ template<class Occupant = void*>
 class Nav_graph_node : public Graph_node
 {
     public:
-    Nav_graph_node(int layer, int index) : Graph_node(layer, index), m_occupant(Occupant()) { }
+    Nav_graph_node(Node_location location) : Graph_node(location), m_occupant(Occupant()) { }
 
-    Nav_graph_node(int layer, int index, Vector2D position) : Graph_node(layer, index), m_position(position), m_occupant(Occupant()) { }
-
-    Nav_graph_node(std::ifstream& stream) : m_occupant(Occupant()) { }
+    Nav_graph_node(Node_location location, Vector2D position) : Graph_node(Node_location location), m_position(position), m_occupant(Occupant()) { }
 
     virtual ~Nav_graph_node() { }
 
@@ -30,7 +28,7 @@ class Nav_graph_node : public Graph_node
         return output;
     }
 
-    protected:
+    private:
     // optional record of the coordinates that this node lies on 
     // in the environment space
     Vector2D m_position;

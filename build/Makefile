@@ -150,6 +150,60 @@ driver.cpp.s:
 	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/driver.cpp.s
 .PHONY : driver.cpp.s
 
+src/ANN/FeedForwardANN.o: src/ANN/FeedForwardANN.cpp.o
+
+.PHONY : src/ANN/FeedForwardANN.o
+
+# target to build an object file
+src/ANN/FeedForwardANN.cpp.o:
+	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.o
+.PHONY : src/ANN/FeedForwardANN.cpp.o
+
+src/ANN/FeedForwardANN.i: src/ANN/FeedForwardANN.cpp.i
+
+.PHONY : src/ANN/FeedForwardANN.i
+
+# target to preprocess a source file
+src/ANN/FeedForwardANN.cpp.i:
+	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.i
+.PHONY : src/ANN/FeedForwardANN.cpp.i
+
+src/ANN/FeedForwardANN.s: src/ANN/FeedForwardANN.cpp.s
+
+.PHONY : src/ANN/FeedForwardANN.s
+
+# target to generate assembly for a file
+src/ANN/FeedForwardANN.cpp.s:
+	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/ANN/FeedForwardANN.cpp.s
+.PHONY : src/ANN/FeedForwardANN.cpp.s
+
+src/ANN/Neurons/ANN_layers.o: src/ANN/Neurons/ANN_layers.cpp.o
+
+.PHONY : src/ANN/Neurons/ANN_layers.o
+
+# target to build an object file
+src/ANN/Neurons/ANN_layers.cpp.o:
+	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.o
+.PHONY : src/ANN/Neurons/ANN_layers.cpp.o
+
+src/ANN/Neurons/ANN_layers.i: src/ANN/Neurons/ANN_layers.cpp.i
+
+.PHONY : src/ANN/Neurons/ANN_layers.i
+
+# target to preprocess a source file
+src/ANN/Neurons/ANN_layers.cpp.i:
+	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.i
+.PHONY : src/ANN/Neurons/ANN_layers.cpp.i
+
+src/ANN/Neurons/ANN_layers.s: src/ANN/Neurons/ANN_layers.cpp.s
+
+.PHONY : src/ANN/Neurons/ANN_layers.s
+
+# target to generate assembly for a file
+src/ANN/Neurons/ANN_layers.cpp.s:
+	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/ANN/Neurons/ANN_layers.cpp.s
+.PHONY : src/ANN/Neurons/ANN_layers.cpp.s
+
 src/GA/GeneticAlgorithmBool.o: src/GA/GeneticAlgorithmBool.cpp.o
 
 .PHONY : src/GA/GeneticAlgorithmBool.o
@@ -177,32 +231,59 @@ src/GA/GeneticAlgorithmBool.cpp.s:
 	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/GA/GeneticAlgorithmBool.cpp.s
 .PHONY : src/GA/GeneticAlgorithmBool.cpp.s
 
-src/Utilities/read_file.o: src/Utilities/read_file.cpp.o
+src/Utilities/Graphs/Finite_graph.o: src/Utilities/Graphs/Finite_graph.cpp.o
 
-.PHONY : src/Utilities/read_file.o
+.PHONY : src/Utilities/Graphs/Finite_graph.o
 
 # target to build an object file
-src/Utilities/read_file.cpp.o:
-	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/Utilities/read_file.cpp.o
-.PHONY : src/Utilities/read_file.cpp.o
+src/Utilities/Graphs/Finite_graph.cpp.o:
+	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/Utilities/Graphs/Finite_graph.cpp.o
+.PHONY : src/Utilities/Graphs/Finite_graph.cpp.o
 
-src/Utilities/read_file.i: src/Utilities/read_file.cpp.i
+src/Utilities/Graphs/Finite_graph.i: src/Utilities/Graphs/Finite_graph.cpp.i
 
-.PHONY : src/Utilities/read_file.i
+.PHONY : src/Utilities/Graphs/Finite_graph.i
 
 # target to preprocess a source file
-src/Utilities/read_file.cpp.i:
-	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/Utilities/read_file.cpp.i
-.PHONY : src/Utilities/read_file.cpp.i
+src/Utilities/Graphs/Finite_graph.cpp.i:
+	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/Utilities/Graphs/Finite_graph.cpp.i
+.PHONY : src/Utilities/Graphs/Finite_graph.cpp.i
 
-src/Utilities/read_file.s: src/Utilities/read_file.cpp.s
+src/Utilities/Graphs/Finite_graph.s: src/Utilities/Graphs/Finite_graph.cpp.s
 
-.PHONY : src/Utilities/read_file.s
+.PHONY : src/Utilities/Graphs/Finite_graph.s
 
 # target to generate assembly for a file
-src/Utilities/read_file.cpp.s:
-	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/Utilities/read_file.cpp.s
-.PHONY : src/Utilities/read_file.cpp.s
+src/Utilities/Graphs/Finite_graph.cpp.s:
+	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/Utilities/Graphs/Finite_graph.cpp.s
+.PHONY : src/Utilities/Graphs/Finite_graph.cpp.s
+
+src/Utilities/Method_scorer.o: src/Utilities/Method_scorer.cpp.o
+
+.PHONY : src/Utilities/Method_scorer.o
+
+# target to build an object file
+src/Utilities/Method_scorer.cpp.o:
+	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/Utilities/Method_scorer.cpp.o
+.PHONY : src/Utilities/Method_scorer.cpp.o
+
+src/Utilities/Method_scorer.i: src/Utilities/Method_scorer.cpp.i
+
+.PHONY : src/Utilities/Method_scorer.i
+
+# target to preprocess a source file
+src/Utilities/Method_scorer.cpp.i:
+	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/Utilities/Method_scorer.cpp.i
+.PHONY : src/Utilities/Method_scorer.cpp.i
+
+src/Utilities/Method_scorer.s: src/Utilities/Method_scorer.cpp.s
+
+.PHONY : src/Utilities/Method_scorer.s
+
+# target to generate assembly for a file
+src/Utilities/Method_scorer.cpp.s:
+	$(MAKE) -f CMakeFiles/AI_PROJECT.dir/build.make CMakeFiles/AI_PROJECT.dir/src/Utilities/Method_scorer.cpp.s
+.PHONY : src/Utilities/Method_scorer.cpp.s
 
 # Help Target
 help:
@@ -216,12 +297,21 @@ help:
 	@echo "... driver.o"
 	@echo "... driver.i"
 	@echo "... driver.s"
+	@echo "... src/ANN/FeedForwardANN.o"
+	@echo "... src/ANN/FeedForwardANN.i"
+	@echo "... src/ANN/FeedForwardANN.s"
+	@echo "... src/ANN/Neurons/ANN_layers.o"
+	@echo "... src/ANN/Neurons/ANN_layers.i"
+	@echo "... src/ANN/Neurons/ANN_layers.s"
 	@echo "... src/GA/GeneticAlgorithmBool.o"
 	@echo "... src/GA/GeneticAlgorithmBool.i"
 	@echo "... src/GA/GeneticAlgorithmBool.s"
-	@echo "... src/Utilities/read_file.o"
-	@echo "... src/Utilities/read_file.i"
-	@echo "... src/Utilities/read_file.s"
+	@echo "... src/Utilities/Graphs/Finite_graph.o"
+	@echo "... src/Utilities/Graphs/Finite_graph.i"
+	@echo "... src/Utilities/Graphs/Finite_graph.s"
+	@echo "... src/Utilities/Method_scorer.o"
+	@echo "... src/Utilities/Method_scorer.i"
+	@echo "... src/Utilities/Method_scorer.s"
 .PHONY : help
 
 

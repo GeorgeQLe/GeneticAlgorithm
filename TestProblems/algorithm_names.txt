@@ -1,4 +1,0 @@
-ASTAR
-BFS
-DFS
-UCS

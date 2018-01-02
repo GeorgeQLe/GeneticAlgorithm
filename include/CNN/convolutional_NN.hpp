@@ -43,7 +43,7 @@ class ConvolutionalNeuralNetwork
 	// debug function
 
 
-private:
+	private:
 	// holds hidden layers of the artificial neural network
 	std::map<unsigned int, std::vector<HiddenLayerNeuron>> m_main_neural_network;
 

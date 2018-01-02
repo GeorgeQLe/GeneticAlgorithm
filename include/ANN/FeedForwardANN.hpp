@@ -20,7 +20,7 @@
 ---------------------------------------------------------------------------------------------------------------------------*/
 class FF_ANN
 {
-public:
+	public:
 	// default constructor
  	FF_ANN() { }
 
@@ -55,7 +55,7 @@ public:
 	// debug function
 
 
-private:
+	private:
 	// holds hidden layers of the artificial neural network
 	std::map<unsigned int, std::vector<HiddenLayerNeuron>> m_main_neural_network;
 
@@ -64,6 +64,9 @@ private:
 
 	// holds the neurons of the output layer
 	std::vector<OutputLayerNeuron> m_output_layer;
+
+	// The activation function used by the artificial neural network
+	Activation_function<Sigmoid> ANN_activation;
 };
 
 #endif // FEEDFORWARDANN_HPP

@@ -6,9 +6,10 @@
 #ifndef ANN_LAYERS_HPP
 #define ANN_LAYERS_HPP
 
+#include <iostream>
 #include <map>
 
-#include "ANN/Activation_Functions/activation_functions.hpp"
+#include "ANN/Activation_Functions/Activation_functions.hpp"
 #include "ANN_neuron.hpp"
 
 typedef enum layer_name { NO_LAYER_NAME = 0, INPUT_LAYER_NEURON, HIDDEN_LAYER_NEURON, OUTPUT_LAYER_NEURON } Layer_name;
@@ -20,8 +21,8 @@ typedef enum layer_name { NO_LAYER_NAME = 0, INPUT_LAYER_NEURON, HIDDEN_LAYER_NE
 ------------------------------------------------------------------------------------------*/
 class InputLayerNeuron : protected Neuron
 {
-public:
-	InputLayerNeuron::InputLayerNeuron(double value) : Neuron(value) { }
+	public:
+	InputLayerNeuron(double value) : Neuron(value) { }
 
 	// accessor function
 	double get_value() const { return m_neuron_value; }
@@ -33,7 +34,7 @@ public:
 	// overloaded assignment operator
 	void operator=(const InputLayerNeuron& neuron) { m_neuron_value = neuron.m_neuron_value; }
 
-private:
+	private:
 	// default constructor is private to prevent the use of the neuron in the input layer without providing a input value
 	InputLayerNeuron() { }
 };
@@ -48,7 +49,7 @@ private:
 -------------------------------------------------------------------------------*/
 class HiddenLayerNeuron : protected Neuron
 {
-public:
+	public:
 	HiddenLayerNeuron(std::vector<double> input_vectors, std::vector<double> input_weights, double bias) 
 			: m_input_vectors(input_vectors), m_input_weight(input_weights), m_bias(bias), m_summation(0),
 			summation_complete(false) { }
@@ -62,7 +63,7 @@ public:
 
 	void calculate_output(Activation_function<Sigmoid> function_to_be_used);
 
-private:
+	private:
 	/*------------------------------------------
 		Calculates u = (summation of wi * xi + bias)
 	-------------------------------------------*/
@@ -92,7 +93,7 @@ private:
 
 class OutputLayerNeuron : public HiddenLayerNeuron
 {
-public:
+	public:
 	OutputLayerNeuron(std::vector<double> range_of_representations, std::vector<std::string> representations);
 	OutputLayerNeuron(std::map<std::pair<double, double>, std::string> representation, 
 					std::vector<double> input_vectors, std::vector<double> input_weights, double bias) 
@@ -115,7 +116,7 @@ public:
 	// overloaded assignment operator modifies both values of the neuron
 	void operator=(const OutputLayerNeuron& neuron) { m_neuron_value = neuron.m_neuron_value; representation_of_neuron = neuron.representation_of_neuron; }
 
-private:
+	private:
 	// This member variable maps strings to the range of values that it represents, the range is specified as the values between
     // the first and second double in the pair.
 	std::map<std::pair<double, double>, std::string> representation_of_neuron;

@@ -4,6 +4,7 @@
 #ifndef GENETIC_ALGORITHM_BOOL_HPP
 #define GENETIC_ALGORITHM_BOOL_HPP
 
+#include <memory> // std::unique_ptr
 #include <utility> // std::pair
 #include <vector> // std::vector
 
@@ -15,12 +16,11 @@ class GeneticAlgorithmBool
 {
     public:
     // singleton accessor function
-    static GeneticAlgorithmBool* get_instance()
+    static GeneticAlgorithmBool& get_instance()
     {
-        GeneticAlgorithmBool* instance = new GeneticAlgorithmBool();
+        static GeneticAlgorithmBool instance;
         return instance;
     }
-
     // mutator functions
     void set_number_of_traits(unsigned int number_traits) { m_number_of_traits = number_traits; }
     void set_size_of_population(unsigned int size_population) { m_size_of_population = size_population; }
@@ -34,13 +34,7 @@ class GeneticAlgorithmBool
     --------------------------------------------------------------------*/
     Individual generate_expected_data();
 
-    ~GeneticAlgorithmBool();
-
     private:
-    // The constructor of the genetic algorithm is private because the class
-    // is a singleton.
-    GeneticAlgorithmBool() : m_number_of_traits(1), m_size_of_population(10), m_number_of_generations(10), m_survival_rate(10), m_mutation_rate(1) { }
-
     /*-----------------------------------------------------------------
         This function generates pseudo-random sequences for each of the
         members of the population. Because this genetic algorithm uses
@@ -90,18 +84,18 @@ class GeneticAlgorithmBool
     // useful variables for the genetic algorithm during runtime
 
     // number of traits that each individual will have
-    unsigned int m_number_of_traits; // default 1
+    unsigned int m_number_of_traits = 1; // default 1
     // population size
-    unsigned int m_size_of_population; // default 10
+    unsigned int m_size_of_population = 10; // default 10
     // number of generations
-    unsigned int m_number_of_generations; // default 10
+    unsigned int m_number_of_generations = 10; // default 10
     // percantage survival rate (i.e. a value of 50 will be fifty percent survival rate)
-    unsigned int m_survival_rate; // default 10
+    unsigned int m_survival_rate = 10; // default 10 (ten percent survival rate)
     // percentage mutation rate (i.e. a value of 1 will be one percent mutation rate)
-    unsigned int m_mutation_rate; // default 1
+    unsigned int m_mutation_rate = 1; // default 1
 
     // counter value
-    unsigned int m_current_generation; // starting generation is zero (incremented after generating first random generation)
+    unsigned int m_current_generation = 0; // starting generation is zero (incremented after generating first random generation)
 };
 
 #endif // GENETIC_ALGORITHM_BOOL_HPP
